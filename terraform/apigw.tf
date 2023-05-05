@@ -1,7 +1,7 @@
 resource "aws_apigatewayv2_api" "example" {
   name                       = "example-websocket-api"
   protocol_type              = "HTTP"
-  route_selection_expression = "${request.method}"
+  #route_selection_expression = "${request.method}"
 }
 
 resource "aws_apigatewayv2_route" "example" {
