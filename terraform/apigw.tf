@@ -37,3 +37,25 @@ resource "aws_lambda_permission" "api" {
   # within API Gateway.
   source_arn = "${aws_api_gateway_rest_api.api.execution_arn}/*"
 }
+
+
+
+resource "aws_api_gateway_deployment" "api" {
+  rest_api_id = aws_api_gateway_rest_api.api.id
+
+   triggers = {
+    redeployment = sha1(
+      jsonencode([
+        aws_api_gateway_resource.api.id,
+        aws_api_gateway_method.api.id,
+        aws_api_gateway_integration.api.id
+      ])
+    )
+  }
+}
+
+resource "aws_api_gateway_stage" "api" {
+  deployment_id = aws_api_gateway_deployment.api.id
+  rest_api_id   = aws_api_gateway_rest_api.api.id
+  stage_name    = "dev"
+}
