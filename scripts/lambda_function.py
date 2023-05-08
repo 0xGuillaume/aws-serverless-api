@@ -9,12 +9,12 @@ def lambda_handler(context, event):
     """."""
 
     data = client.scan(
-        TableName="assets"
+        TableName="assets-tf"
     )
 
     response = {
       'statusCode': 200,
-      'body': json.dumps(data),
+      'body': json.dumps(data["Items"]),
       'headers': {
             'Content-Type': 'application/json',
             'Access-Control-Allow-Origin': '*'
