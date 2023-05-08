@@ -1,8 +1,3 @@
-variable "ddb_table" {
-  type    = string
-  default = "assets"
-}
-
 variable "ddb_hashkey" {
   type    = string
   default = "hostname"
