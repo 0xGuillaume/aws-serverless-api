@@ -1,5 +1,5 @@
 resource "aws_api_gateway_rest_api" "api" {
-  name        = var.api-assets-serverless
+  name        = var.apigw_name
   description = "This is a serverless API for demonstration purposes."
 }
 
