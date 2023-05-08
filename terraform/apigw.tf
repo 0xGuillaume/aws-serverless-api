@@ -1,13 +1,15 @@
 resource "aws_api_gateway_rest_api" "api" {
-  name        = "serverless-api"
+  name        = var.api-assets-serverless
   description = "This is a serverless API for demonstration purposes."
 }
+
 
 resource "aws_api_gateway_resource" "api" {
   rest_api_id = aws_api_gateway_rest_api.api.id
   parent_id   = aws_api_gateway_rest_api.api.root_resource_id
-  path_part   = "assets"
+  path_part   = var.apigw_pathpart
 }
+
 
 resource "aws_api_gateway_method" "api" {
   rest_api_id   = aws_api_gateway_rest_api.api.id
@@ -32,18 +34,14 @@ resource "aws_lambda_permission" "api" {
   action        = "lambda:InvokeFunction"
   function_name = aws_lambda_function.lambda.function_name
   principal     = "apigateway.amazonaws.com"
-
-  # The /* part allows invocation from any stage, method and resource path
-  # within API Gateway.
-  source_arn = "${aws_api_gateway_rest_api.api.execution_arn}/*"
+  source_arn    = "${aws_api_gateway_rest_api.api.execution_arn}/*"
 }
-
 
 
 resource "aws_api_gateway_deployment" "api" {
   rest_api_id = aws_api_gateway_rest_api.api.id
 
-   triggers = {
+  triggers = {
     redeployment = sha1(
       jsonencode([
         aws_api_gateway_resource.api.id,
@@ -54,8 +52,9 @@ resource "aws_api_gateway_deployment" "api" {
   }
 }
 
+
 resource "aws_api_gateway_stage" "api" {
   deployment_id = aws_api_gateway_deployment.api.id
   rest_api_id   = aws_api_gateway_rest_api.api.id
-  stage_name    = "dev"
+  stage_name    = var.apigw_stage
 }
