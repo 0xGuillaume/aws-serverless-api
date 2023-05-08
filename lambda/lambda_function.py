@@ -9,7 +9,7 @@ def lambda_handler(context, event):
     """."""
 
     data = client.scan(
-        TableName="assets-tf"
+        TableName="assets"
     )
 
     response = {
