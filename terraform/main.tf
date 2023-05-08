@@ -10,6 +10,11 @@ terraform {
 
 provider "aws" {}
 
+locals {
+  json_items = file("./items.json")
+  items = jsondecode(local.json_items)
+}
+
 
 data "aws_iam_policy_document" "assume_role" {
   statement {
