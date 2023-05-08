@@ -14,14 +14,9 @@ resource "aws_dynamodb_table" "dynamodb" {
 
 
 resource "aws_dynamodb_table_item" "dynamodb" {
+  for_each = local.items
   table_name = aws_dynamodb_table.dynamodb.name
   hash_key   = aws_dynamodb_table.dynamodb.hash_key
 
-  item = <<ITEM
-{
-  "hostname": {"S": "AWSUX01"},
-  "os": {"S": "linux"},
-  "region": {"S": "eu-west-1"}
-}
-ITEM
+  item = jsonencode(each.value)
 }
