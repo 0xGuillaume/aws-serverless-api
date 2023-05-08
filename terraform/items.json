@@ -1,0 +1,17 @@
+{
+	"Item1": {
+		"hostname": {"S": "AWSUX01"},
+		"os": {"S": "linux"},
+		"region": {"S": "eu-west-1"}
+	},
+	"Item2": {
+		"hostname": {"S": "AWSUX02"},
+		"os": {"S": "linux"},
+		"region": {"S": "eu-west-3"}
+	},
+	"Item3": {
+		"hostname": {"S": "AWSUX03"},
+		"os": {"S": "linux"},
+		"region": {"S": "eu-west-2"}
+	}
+}
