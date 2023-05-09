@@ -22,3 +22,23 @@ def lambda_handler(context, event):
     }
 
     return response
+
+
+def get_item(context, event):
+    """Get a single item of DynamoDb asset table."""
+
+    item = client.get_item(
+        TableName="assets",
+        Ket={"hostname": "AWSUX01"}
+    ) 
+
+    response = {
+      'statusCode': 200,
+      'body': json.dumps(item),
+      'headers': {
+            'Content-Type': 'application/json',
+            'Access-Control-Allow-Origin': '*'
+        },
+    }
+
+    return response
