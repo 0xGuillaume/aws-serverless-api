@@ -5,7 +5,7 @@ import json
 client = boto3.client('dynamodb')
 
 
-def lambda_handler(context, event):
+def lambda_handler(context, event) -> dict:
     """."""
 
     data = client.scan(
@@ -24,12 +24,14 @@ def lambda_handler(context, event):
     return response
 
 
-def get_item(context, event):
+def get_item(context, event) -> dict:
     """Get a single item of DynamoDb asset table."""
 
     item = client.get_item(
         TableName="assets",
-        Ket={"hostname": "AWSUX01"}
+        Key={
+            "hostname": {"S": "AWSUX01"}
+        }
     ) 
 
     response = {
