@@ -5,8 +5,8 @@ import json
 client = boto3.client('dynamodb')
 
 
-def lambda_handler(context, event) -> dict:
-    """."""
+def scan(context, event) -> dict:
+    """Get all items of DynamoDB asset table."""
 
     data = client.scan(
         TableName="assets"
@@ -36,7 +36,7 @@ def get_item(context, event) -> dict:
 
     response = {
       'statusCode': 200,
-      'body': json.dumps(item),
+      'body': json.dumps(item["Item"]),
       'headers': {
             'Content-Type': 'application/json',
             'Access-Control-Allow-Origin': '*'
