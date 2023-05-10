@@ -6,14 +6,14 @@ data "archive_file" "lambda" {
 
 
 resource "aws_lambda_function" "lambda" {
-  # If the file is not in the current working directory you will need to include a
-  # path.module in the filename.
+  for_each = { for each in var.lambda : each.name => each }
+
   filename      = "../lambda/lambda_function_payload.zip"
-  function_name = var.lambda_function
+  function_name = each.value.name
   role          = aws_iam_role.iam_for_lambda.arn
-  handler       = "lambda_function.lambda_handler"
+  handler       = each.value.handler
 
   source_code_hash = data.archive_file.lambda.output_base64sha256
 
-  runtime = "python3.10"
+  runtime = each.value.runtime
 }
