@@ -5,7 +5,7 @@ import json
 client = boto3.client('dynamodb')
 
 
-def scan(context, event) -> dict:
+def scan(context:dict, event) -> dict:
     """Get all items of DynamoDB asset table."""
 
     data = client.scan(
@@ -24,7 +24,7 @@ def scan(context, event) -> dict:
     return response
 
 
-def get_item(context, event) -> dict:
+def get_item(context:dict, event) -> dict:
     """Get a single item of DynamoDb asset table."""
 
     item = client.get_item(
