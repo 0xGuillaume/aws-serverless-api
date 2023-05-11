@@ -13,25 +13,22 @@ variable "dynamodb" {
 }
 
 
-variable "apigw_name" {
-  type    = string
-  default = "api-assets-serverless"
-}
-
-
-variable "apigw_pathpart" {
-  type    = string
-  default = "assets"
-}
-
-
-variable "apigw_stage" {
-  type    = string
-  default = "dev"
-}
-
-
 variable "apigw" {
+  type = object({
+    name        = string
+    description = string
+    stage       = string
+  })
+
+  default = {
+    "name": "api-assets",
+    "description": "This is a serverless API for demonstration purposes."
+    "stage": "dev"
+  }
+}
+
+
+variable "apigw_methods" {
   type = list(object({
     name = string
     path = string
