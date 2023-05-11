@@ -1,14 +1,14 @@
 variable "dynamodb" {
   type = object({
+    name      = string
     hash_key  = string 
     policy    = string
-    table     = string
   })
 
   default = {
+    "name": "assets"
     "hash_key": "hostname" 
     "policy": "DynamoDbAllowScanAndGetItem"
-    "table": "assets"
   }
 }
 
