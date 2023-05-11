@@ -69,13 +69,3 @@ variable "lambda" {
     }
   ]
 }
-
-variable "lambda_function" {
-  type    = string
-  default = "api-assets-scan"
-}
-
-variable "lambda_function_get_item" {
-  type    = string
-  default = "api-assets-get-item"
-}
