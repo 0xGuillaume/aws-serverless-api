@@ -1,13 +1,12 @@
 resource "aws_dynamodb_table" "dynamodb" {
-
-  name           = var.ddb_table
+  name           = var.dynamodb.name
   billing_mode   = "PROVISIONED"
   read_capacity  = 20
   write_capacity = 20
-  hash_key       = var.ddb_hashkey
+  hash_key       = var.dynamodb.hash_key
 
   attribute {
-    name = var.ddb_hashkey
+    name = var.dynamodb.hash_key
     type = "S"
   }
 }
