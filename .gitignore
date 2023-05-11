@@ -1,4 +1,12 @@
+# Terraform files
 .terraform
 .terraform.lock.hcl
 terraform.tfstate
 terraform.tfstate.backup
+
+# Common files
+*.zip
+
+# Python
+__pycache__
+env/
