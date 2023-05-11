@@ -36,7 +36,7 @@ resource "aws_api_gateway_integration" "api" {
 
 
 resource "aws_lambda_permission" "api" {
-  for_each = { for each in var.lambda : each.name => each }
+  for_each = { for each in var.lambda_handlers : each.name => each }
 
   statement_id  = "AllowMyDemoAPIInvoke"
   action        = "lambda:InvokeFunction"
