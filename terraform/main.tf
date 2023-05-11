@@ -36,7 +36,7 @@ resource "aws_iam_role" "iam_for_lambda" {
   assume_role_policy = data.aws_iam_policy_document.assume_role.json
 
   inline_policy {
-    name = var.ddb_policy
+    name = var.dynamodb.policy
 
     policy = jsonencode({
       Version = "2012-10-17"
