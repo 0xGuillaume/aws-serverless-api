@@ -10,6 +10,7 @@ terraform {
 
 provider "aws" {}
 
+
 locals {
   json_items = file("./items.json")
   items      = jsondecode(local.json_items)
@@ -31,7 +32,7 @@ data "aws_iam_policy_document" "assume_role" {
 
 
 resource "aws_iam_role" "iam_for_lambda" {
-  name               = var.lambda_role
+  name               = var.lambda.role
   assume_role_policy = data.aws_iam_policy_document.assume_role.json
 
   inline_policy {
