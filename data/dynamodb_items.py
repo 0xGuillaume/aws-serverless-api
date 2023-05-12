@@ -26,10 +26,14 @@ class DynamoDbItems:
             "region": {"S": ""},
             "ipaddress": {"S": ""},
             "state": {"S": ""},
-            "monitoring": {"BOOl": ""},
+            "monitoring": {"S": ""}
         }
 
-        self._generate()
+        i = self._generate()
+        print(i)
+
+
+
         self._write()
 
 
@@ -63,19 +67,32 @@ class DynamoDbItems:
         return choice(["running", "stopped", "terminated"])
 
 
-    def _generate(self) -> list:
+    def _generate(self) -> dict:
         """Generate items dataset."""
+
+        items = {}
 
         for index in range(1, self.amount + 1):
 
-            self.item["os"]         = self._os()
-            self.item["hostname"]   = f"AWS{self._os()[:3]}{index}".upper()
-            self.item["region"]     = self._region()
-            self.item["ipaddress"]  = self._ipaddress()
-            self.item["state"]      = self._state()
-            self.item["monitoring"] = choice([True, False])
+            item = self.item
+            i_ = f"Item{index}"
 
-            self.items.update({f"Item{index}": self.item})
+            item[i_] = {}
+
+            print(item[i_])
+            os = self._os()
+
+            #item[i_]["os"]["S"]            = os
+            #item[i_]["hostname"]["S"]      = f"AWS{os[:3]}{index}".upper()
+            #item[i_]["region"]["S"]        = self._region()
+            #item[i_]["ipaddress"]["S"]     = self._ipaddress()
+            #item[i_]["state"]["S"]         = self._state()
+            #item[i_]["monitoring"]["S"]    = str(choice([True, False]))
+
+            #items.update("Item{index}", item)
+
+        #print(items,"\n")
+        return items
 
 
     def _write(self) -> None:
