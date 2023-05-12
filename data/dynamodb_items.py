@@ -1,13 +1,36 @@
 """Generate random dynamodb dataset."""
+from argparse import ArgumentParser
 from random import randint, choice
 from json import dump
 
 
-FILENAME = "items.json"
+parser = ArgumentParser(
+    description="Generate X AWS DynamoDb table items in a JSON file."
+)
+
+parser.add_argument(
+    "-a", "--amount",
+    required=True,
+    type=int,
+    help="How many items you want to generate.",
+)
+
+args = parser.parse_args()
 
 
 class DynamoDbItems:
-    """Generate DynamoTb json items."""
+    """Generate DynamoTb json items.
+
+    The dataset used is based uppon AWS EC2
+    instances attributes such as :
+        - IpAddress
+        - Region
+        - Os
+        - Hostname
+
+    Attributes:
+        amount: A integer indicating how many items to generate.
+    """
 
 
     def __init__(self, amount:int) -> None:
@@ -18,22 +41,10 @@ class DynamoDbItems:
         """
 
         self.amount = amount
-
+        self.filename = "items.json"
         self.items = {}
-        self.item = {
-            "hostname": {"S": ""},
-            "os": {"S": ""},
-            "region": {"S": ""},
-            "ipaddress": {"S": ""},
-            "state": {"S": ""},
-            "monitoring": {"S": ""}
-        }
 
-        i = self._generate()
-        print(i)
-
-
-
+        self._generate()
         self._write()
 
 
@@ -70,37 +81,35 @@ class DynamoDbItems:
     def _generate(self) -> dict:
         """Generate items dataset."""
 
-        items = {}
-
         for index in range(1, self.amount + 1):
 
-            item = self.item
-            i_ = f"Item{index}"
+            item = {
+                "hostname": {"S": ""},
+                "os": {"S": ""},
+                "region": {"S": ""},
+                "ipaddress": {"S": ""},
+                "state": {"S": ""},
+                "monitoring": {"S": ""}
+            }
 
-            item[i_] = {}
+            system = self._os()
 
-            print(item[i_])
-            os = self._os()
+            item["os"]["S"]            = system
+            item["hostname"]["S"]      = f"AWS{system[:3]}{index}".upper()
+            item["region"]["S"]        = self._region()
+            item["ipaddress"]["S"]     = self._ipaddress()
+            item["state"]["S"]         = self._state()
+            item["monitoring"]["S"]    = str(choice([True, False]))
 
-            #item[i_]["os"]["S"]            = os
-            #item[i_]["hostname"]["S"]      = f"AWS{os[:3]}{index}".upper()
-            #item[i_]["region"]["S"]        = self._region()
-            #item[i_]["ipaddress"]["S"]     = self._ipaddress()
-            #item[i_]["state"]["S"]         = self._state()
-            #item[i_]["monitoring"]["S"]    = str(choice([True, False]))
-
-            #items.update("Item{index}", item)
-
-        #print(items,"\n")
-        return items
+            self.items[f"Item{index}"] = item
 
 
     def _write(self) -> None:
         """Write DynamoDb items into a json file."""
 
-        with open(FILENAME, "w", encoding="utf-8") as file:
+        with open(self.filename, "w", encoding="utf-8") as file:
             dump(self.items, file, indent=4)
 
 
 if __name__ == "__main__":
-    DynamoDbItems(100)
+    DynamoDbItems(args.amount)
