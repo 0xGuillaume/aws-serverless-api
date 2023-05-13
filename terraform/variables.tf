@@ -1,4 +1,6 @@
 variable "dynamodb" {
+  description = "DynamoDb instance attributes."
+
   type = object({
     name      = string
     hash_key  = string 
@@ -14,6 +16,8 @@ variable "dynamodb" {
 
 
 variable "apigw" {
+  description = "Api Gateway instance attributes."
+
   type = object({
     name        = string
     description = string
@@ -29,6 +33,8 @@ variable "apigw" {
 
 
 variable "apigw_methods" {
+  description = "ApiGateway methods attributes."
+
   type = list(object({
     name = string
     path = string
@@ -48,6 +54,8 @@ variable "apigw_methods" {
 
 
 variable "lambda" {
+  description = "Global lambda attributes."
+
   type = object({
     source_file = string
     output_file = string
@@ -63,6 +71,8 @@ variable "lambda" {
 
 
 variable "lambda_handlers" {
+  description = "Lambdas handlers attributes."
+
   type = list(object({
     name    = string
     runtime = string
