@@ -120,9 +120,7 @@ class Demo:
         try :
             for _ in range(1, self.amount + 1):
 
-                choice_ = choice([1, 2])
-
-                if choice_ == 1:
+                if choice([1, 2]) == 1:
                     self._get_item()
 
                 else:
