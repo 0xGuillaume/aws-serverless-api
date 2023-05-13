@@ -108,7 +108,7 @@ class Demo:
     def _get_item(self) -> str:
         """Returns ApiGateway get_item url."""
 
-        url = self.url + self.outputs["uri_put_item"]["value"]
+        url = self.url + self.outputs["uri_get_item"]["value"]
         code = self._requests(url)
 
         return print(self._output(code, "get item"))
