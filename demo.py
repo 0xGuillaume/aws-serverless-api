@@ -1,4 +1,5 @@
 """Module to query apigw items."""
+import sys
 from random import choice
 from subprocess import getoutput
 from time import sleep
@@ -48,6 +49,13 @@ class Demo:
         outputs = getoutput(
             "terraform -chdir=./terraform/ output -json | jq"
         )
+
+        if not loads(outputs):
+            error = Fore.RED + (
+                "ERROR: Terraform output returns nothing. "
+                "Your infrastructure might not be up."
+            ) + Fore.RESET
+            sys.exit(error)
 
         return loads(outputs)
 
@@ -122,7 +130,7 @@ class Demo:
                 sleep(1)
 
         except KeyboardInterrupt:
-            return
+            sys.exit()
 
 if __name__ == "__main__":
     Demo(args.amount)
