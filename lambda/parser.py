@@ -28,10 +28,12 @@ def scan(context:dict, event) -> dict:
 def get_item(context:dict, event) -> dict:
     """Get a single item of DynamoDb asset table."""
 
+    hostname = context["pathParamaters"]["hostname"]
+
     item = client.get_item(
         TableName="assets",
         Key={
-            "hostname": {"S": "AWSUX01"}
+            "hostname": {"S": hostname}
         }
     )
 
