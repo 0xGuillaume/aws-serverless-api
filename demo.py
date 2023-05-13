@@ -13,7 +13,7 @@ from colorama import Fore
 parser = ArgumentParser()
 
 parser.add_argument(
-    "-a", "--amount", 
+    "-a", "--amount",
     required=True,
     type=int,
     help="Amount of requests to run."
