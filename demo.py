@@ -1,5 +1,4 @@
 """Module to query apigw items."""
-from colorama import Fore
 from random import choice
 from subprocess import getoutput
 from time import sleep
@@ -7,13 +6,14 @@ from datetime import datetime
 from json import loads
 from argparse import ArgumentParser
 from requests import get as request
+from colorama import Fore
 
 
 parser = ArgumentParser()
 
 parser.add_argument(
     "-a", "--amount", 
-    required=True, 
+    required=True,
     type=int,
     help="Amount of requests to run."
 )
@@ -49,7 +49,7 @@ class Demo:
             "terraform -chdir=./terraform/ output -json | jq"
         )
 
-        return loads(outputs) 
+        return loads(outputs)
 
 
     def _url(self) -> str:
@@ -59,7 +59,7 @@ class Demo:
         stage       = self.outputs["stage"]["value"]
 
         return f"{base_url}{stage}/"
-    
+
 
     def _output(self, code:str, uri:str) -> None:
         """Formats requests output.
@@ -75,8 +75,7 @@ class Demo:
         if code.startswith("2"):
             return Fore.CYAN + output + Fore.RESET
 
-        else:
-            return Fore.RED + output + Fore.RESET
+        return Fore.RED + output + Fore.RESET
 
 
     def _requests(self, url:str) -> None:
@@ -86,7 +85,7 @@ class Demo:
             url: HTTP url to request.
         """
 
-        return request(url).status_code
+        return request(url, timeout=3).status_code
 
 
     def _scan(self) -> str:
@@ -111,7 +110,7 @@ class Demo:
         """Run X HTTP requests for demo purpose."""
 
         try :
-            for index in range(1, self.amount + 1):
+            for _ in range(1, self.amount + 1):
 
                 choice_ = choice([1, 2])
 
@@ -123,7 +122,7 @@ class Demo:
                 sleep(1)
 
         except KeyboardInterrupt:
-            exit()
+            return
 
 if __name__ == "__main__":
     Demo(args.amount)
