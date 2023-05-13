@@ -16,7 +16,7 @@ output "uri_scan" {
 }
 
 
-output "uri_put_item" {
+output "uri_get_item" {
   value       = var.apigw_methods[1].path
   description = "URI of the get_item methods."
 }
