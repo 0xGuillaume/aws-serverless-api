@@ -1,17 +1,62 @@
 {
-	"Item1": {
-		"hostname": {"S": "AWSUX01"},
-		"os": {"S": "linux"},
-		"region": {"S": "eu-west-1"}
-	},
-	"Item2": {
-		"hostname": {"S": "AWSUX02"},
-		"os": {"S": "linux"},
-		"region": {"S": "eu-west-3"}
-	},
-	"Item3": {
-		"hostname": {"S": "AWSUX03"},
-		"os": {"S": "linux"},
-		"region": {"S": "eu-west-2"}
-	}
+    "Item1": {
+        "hostname": {
+            "S": "AWSUBU1"
+        },
+        "os": {
+            "S": "ubuntu"
+        },
+        "region": {
+            "S": "eu-west-4"
+        },
+        "ipaddress": {
+            "S": "10.73.250.169"
+        },
+        "state": {
+            "S": "terminated"
+        },
+        "monitoring": {
+            "S": "False"
+        }
+    },
+    "Item2": {
+        "hostname": {
+            "S": "AWSUBU2"
+        },
+        "os": {
+            "S": "ubuntu"
+        },
+        "region": {
+            "S": "us-west-2"
+        },
+        "ipaddress": {
+            "S": "10.209.121.163"
+        },
+        "state": {
+            "S": "terminated"
+        },
+        "monitoring": {
+            "S": "False"
+        }
+    },
+    "Item3": {
+        "hostname": {
+            "S": "AWSDEB3"
+        },
+        "os": {
+            "S": "debian"
+        },
+        "region": {
+            "S": "eu-west-1"
+        },
+        "ipaddress": {
+            "S": "10.142.28.60"
+        },
+        "state": {
+            "S": "stopped"
+        },
+        "monitoring": {
+            "S": "False"
+        }
+    }
 }
