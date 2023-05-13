@@ -1,11 +1,12 @@
 """Module to query apigw items."""
 from colorama import Fore
 from random import choice
-import subprocess
+from subprocess import getoutput
 from time import sleep
-import json
+from datetime import datetime
+from json import loads
 from argparse import ArgumentParser
-import requests
+from requests import get as request
 
 
 parser = ArgumentParser()
@@ -21,10 +22,18 @@ args = parser.parse_args()
 
 
 class Demo:
-    """Run API calls."""
+    """Run API calls.
+
+    Arguments:
+        amount: An integer indicates amount of HTTP request to run.
+    """
 
     def __init__(self, amount:int) -> None:
-        """Initialize Demo class."""
+        """Initialize Demo class.
+        
+        Arguments:
+            amount: Amount of query to run.
+        """
 
         self.amount = amount
         self.outputs = self._outputs()
@@ -36,11 +45,11 @@ class Demo:
     def _outputs(self) -> dict:
         """Get terraform outputs."""
 
-        outputs = subprocess.getoutput(
+        outputs = getoutput(
             "terraform -chdir=./terraform/ output -json | jq"
         )
 
-        return json.loads(outputs) 
+        return loads(outputs) 
 
 
     def _url(self) -> str:
@@ -61,7 +70,7 @@ class Demo:
         """
 
         code = str(code)
-        output = f"[{code}] - HTTP /GET - {uri.upper()}"
+        output = f"{datetime.now()} - [{code}] - HTTP /GET - {uri.upper()}"
 
         if code.startswith("2"):
             return Fore.CYAN + output + Fore.RESET
@@ -77,7 +86,7 @@ class Demo:
             url: HTTP url to request.
         """
 
-        return requests.get(url).status_code
+        return request(url).status_code
 
 
     def _scan(self) -> str:
@@ -101,14 +110,20 @@ class Demo:
     def _run(self) -> None:
         """Run X HTTP requests for demo purpose."""
 
-        for index in range(1, self.amount + 1):
+        try :
+            for index in range(1, self.amount + 1):
 
-            choice([self._scan(), self._get_item()])
-    
-            #self._get_item()
-            #self._scan()
-            sleep(1)
-            
+                choice_ = choice([1, 2])
+
+                if choice_ == 1:
+                    self._get_item()
+
+                else:
+                    self._scan()
+                sleep(1)
+
+        except KeyboardInterrupt:
+            exit()
 
 if __name__ == "__main__":
     Demo(args.amount)
