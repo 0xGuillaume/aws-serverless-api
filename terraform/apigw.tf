@@ -3,7 +3,7 @@ resource "aws_api_gateway_rest_api" "api" {
   description = var.apigw.description
 
   endpoint_configuration {
-    types = ["REGIONAL"]
+    types = [var.apigw.endpoint]
   }
 }
 
@@ -18,14 +18,14 @@ resource "aws_api_gateway_resource" "api" {
 
 
 resource "aws_api_gateway_api_key" "api" {
-  name = "AssetsApiKey"
-  description = "Assets Api Key required to requests the API."
+  name = var.apigw_apikey.name
+  description = var.apigw_apikey.name 
 }
 
 
 resource "aws_api_gateway_usage_plan" "api" {
-  name         = "my-usage-plan"
-  description  = "my description"
+  name         = var.apigw_plan.name
+  description  = var.apigw_plan.description
   product_code = "MYCODE"
 
   api_stages {
@@ -34,9 +34,9 @@ resource "aws_api_gateway_usage_plan" "api" {
   }
 
   quota_settings {
-    limit  = 100
-    offset = 0
-    period = "DAY"
+    limit  = var.apigw_plan.limit
+    offset = var.apigw_plan.offset
+    period = var.apigw_plan.period
   }
 
   throttle_settings {
