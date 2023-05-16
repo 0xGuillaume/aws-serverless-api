@@ -34,9 +34,9 @@ resource "aws_api_gateway_usage_plan" "api" {
   }
 
   quota_settings {
-    limit  = 20
-    offset = 2
-    period = "WEEK"
+    limit  = 100
+    offset = 0
+    period = "DAY"
   }
 
   throttle_settings {
