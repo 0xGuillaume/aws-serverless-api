@@ -20,3 +20,10 @@ output "uri_get_item" {
   value       = var.apigw_methods[1].path
   description = "URI of the get_item methods."
 }
+
+
+output "api_key" {
+  value = aws_api_gateway_api_key.api.value
+  description = "Assets API Key for authenticated requests."
+  sensitive = true
+}
