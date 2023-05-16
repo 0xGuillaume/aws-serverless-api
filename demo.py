@@ -19,6 +19,12 @@ parser.add_argument(
     help="Amount of requests to run."
 )
 
+parser.add_argument(
+    "-i", "--interval",
+    type=int,
+    help="Amount of time (second) between 2 HTTP requests."
+)
+
 args = parser.parse_args()
 
 
@@ -27,18 +33,23 @@ class Demo:
 
     Arguments:
         amount: An integer indicates amount of HTTP request to run.
+        interval: An integer indicates amount of time between 2 HTTP requests.
+
     """
 
-    def __init__(self, amount:int) -> None:
+    def __init__(self, amount:int, interval:int) -> None:
         """Initialize Demo class.
         
         Arguments:
             amount: Amount of query to run.
+            interval: Amount of time between 2 HTTP requests.
         """
+
+        self.amount = amount
+        self.interval = interval
 
         self.items = "./terraform/data/items.json"
         self._items()
-        self.amount = amount
         self.outputs = self._outputs()
         self.url = self._url()
 
@@ -139,10 +150,12 @@ class Demo:
 
                 else:
                     self._scan()
-                sleep(1)
+                sleep(self.interval)
 
         except KeyboardInterrupt:
             sys.exit()
 
 if __name__ == "__main__":
-    Demo(args.amount)
+
+    interval_ = 1 if not args.interval else args.interval
+    Demo(args.amount, interval_)
