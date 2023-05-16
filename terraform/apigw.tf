@@ -34,9 +34,9 @@ resource "aws_api_gateway_usage_plan" "api" {
   }
 
   quota_settings {
-    limit  = var.apigw_plan.limit
-    offset = var.apigw_plan.offset
-    period = var.apigw_plan.period
+    limit  = var.apigw_plan.quota_limit
+    offset = var.apigw_plan.quota_offset
+    period = var.apigw_plan.quota_period
   }
 
   throttle_settings {
@@ -60,7 +60,7 @@ resource "aws_api_gateway_method" "api" {
   resource_id      = aws_api_gateway_resource.api[each.key].id
   http_method      = "GET"
   authorization    = "NONE"
-  api_key_required = true
+  api_key_required = each.value.key_required
 }
 
 
