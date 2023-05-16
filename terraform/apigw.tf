@@ -1,6 +1,10 @@
 resource "aws_api_gateway_rest_api" "api" {
   name        = var.apigw.name
   description = var.apigw.description
+
+  endpoint_configuration {
+    types = ["REGIONAL"]
+  }
 }
 
 
@@ -42,7 +46,7 @@ resource "aws_lambda_permission" "api" {
   action        = "lambda:InvokeFunction"
   function_name = aws_lambda_function.lambda[each.value.name].function_name
   principal     = "apigateway.amazonaws.com"
-  source_arn    = "${aws_api_gateway_rest_api.api.execution_arn}/*"
+  source_arn    = "${aws_api_gateway_rest_api.api.execution_arn}/*/*"
 }
 
 
