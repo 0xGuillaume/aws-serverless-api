@@ -47,7 +47,7 @@ variable "apigw_methods" {
     },
     {
       "name" : "asset-get-item",
-      "path" : "asset"
+      "path" : "{hostname+}"
     }
   ]
 }
