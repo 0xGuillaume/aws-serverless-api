@@ -4,7 +4,7 @@ from random import choice
 from subprocess import getoutput
 from time import sleep
 from datetime import datetime
-from json import loads
+from json import loads, load
 from argparse import ArgumentParser
 from requests import get as request
 from colorama import Fore
@@ -36,11 +36,22 @@ class Demo:
             amount: Amount of query to run.
         """
 
+        self.items = "./terraform/data/items.json"
+        self._items()
         self.amount = amount
         self.outputs = self._outputs()
         self.url = self._url()
 
         self._run()
+
+
+    def _items(self) -> list:
+        """Get all available items in json file."""
+        
+        with open(self.items, "r") as file:
+            items = load(file)
+
+        return [items[item]["hostname"]["S"] for item in items]
 
 
     def _outputs(self) -> dict:
@@ -93,7 +104,9 @@ class Demo:
             url: HTTP url to request.
         """
 
-        return request(url, timeout=3).status_code
+        header = {"x-api-key": self.outputs["api_key"]["value"]}
+
+        return request(url, headers=header, timeout=3).status_code
 
 
     def _scan(self) -> str:
@@ -108,10 +121,11 @@ class Demo:
     def _get_item(self) -> str:
         """Returns ApiGateway get_item url."""
 
-        url = self.url + self.outputs["uri_get_item"]["value"]
+        asset = choice(self._items())
+        url = self.url + asset
         code = self._requests(url)
 
-        return print(self._output(code, "get item"))
+        return print(self._output(code, f"get item - {asset}"))
 
 
     def _run(self) -> None:
