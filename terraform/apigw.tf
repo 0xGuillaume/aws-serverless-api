@@ -18,8 +18,8 @@ resource "aws_api_gateway_resource" "api" {
 
 
 resource "aws_api_gateway_api_key" "api" {
-  name = var.apigw_apikey.name
-  description = var.apigw_apikey.name 
+  name        = var.apigw_apikey.name
+  description = var.apigw_apikey.name
 }
 
 
@@ -54,18 +54,18 @@ resource "aws_api_gateway_usage_plan_key" "api" {
 
 
 resource "aws_api_gateway_method" "api" {
-  for_each = { for each in var.apigw_methods: each.name => each }
+  for_each = { for each in var.apigw_methods : each.name => each }
 
-  rest_api_id   = aws_api_gateway_rest_api.api.id
-  resource_id   = aws_api_gateway_resource.api[each.key].id
-  http_method   = "GET"
-  authorization = "NONE"
+  rest_api_id      = aws_api_gateway_rest_api.api.id
+  resource_id      = aws_api_gateway_resource.api[each.key].id
+  http_method      = "GET"
+  authorization    = "NONE"
   api_key_required = true
 }
 
 
 resource "aws_api_gateway_integration" "api" {
-  for_each = { for each in var.apigw_methods: each.name => each }
+  for_each = { for each in var.apigw_methods : each.name => each }
 
   rest_api_id             = aws_api_gateway_rest_api.api.id
   resource_id             = aws_api_gateway_resource.api[each.key].id

@@ -23,7 +23,7 @@ output "uri_get_item" {
 
 
 output "api_key" {
-  value = aws_api_gateway_api_key.api.value
+  value       = aws_api_gateway_api_key.api.value
   description = "Assets API Key for authenticated requests."
-  sensitive = true
+  sensitive   = true
 }

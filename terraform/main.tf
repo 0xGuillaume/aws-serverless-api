@@ -42,7 +42,7 @@ resource "aws_iam_role" "iam_for_lambda" {
       Version = "2012-10-17"
       Statement = [
         {
-          Action   = [
+          Action = [
             "dynamodb:Scan",
             "dynamodb:GetItem"
           ]
