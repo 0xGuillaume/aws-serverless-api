@@ -17,6 +17,42 @@ resource "aws_api_gateway_resource" "api" {
 }
 
 
+resource "aws_api_gateway_api_key" "api" {
+  name = "AssetsApiKey"
+  description = "Assets Api Key required to requests the API."
+}
+
+
+resource "aws_api_gateway_usage_plan" "api" {
+  name         = "my-usage-plan"
+  description  = "my description"
+  product_code = "MYCODE"
+
+  api_stages {
+    api_id = aws_api_gateway_rest_api.api.id
+    stage  = aws_api_gateway_stage.api.stage_name
+  }
+
+  quota_settings {
+    limit  = 20
+    offset = 2
+    period = "WEEK"
+  }
+
+  throttle_settings {
+    burst_limit = 5
+    rate_limit  = 10
+  }
+}
+
+
+resource "aws_api_gateway_usage_plan_key" "api" {
+  key_id        = aws_api_gateway_api_key.api.id
+  key_type      = "API_KEY"
+  usage_plan_id = aws_api_gateway_usage_plan.api.id
+}
+
+
 resource "aws_api_gateway_method" "api" {
   for_each = { for each in var.apigw_methods: each.name => each }
 
@@ -24,6 +60,7 @@ resource "aws_api_gateway_method" "api" {
   resource_id   = aws_api_gateway_resource.api[each.key].id
   http_method   = "GET"
   authorization = "NONE"
+  api_key_required = true
 }
 
 
