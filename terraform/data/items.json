@@ -1,1 +1,2002 @@
-{}
+{
+    "Item1": {
+        "hostname": {
+            "S": "AWSDEB1"
+        },
+        "os": {
+            "S": "debian"
+        },
+        "region": {
+            "S": "us-west-2"
+        },
+        "ipaddress": {
+            "S": "10.28.247.21"
+        },
+        "state": {
+            "S": "terminated"
+        },
+        "monitoring": {
+            "S": "False"
+        }
+    },
+    "Item2": {
+        "hostname": {
+            "S": "AWSDEB2"
+        },
+        "os": {
+            "S": "debian"
+        },
+        "region": {
+            "S": "eu-west-4"
+        },
+        "ipaddress": {
+            "S": "10.124.12.44"
+        },
+        "state": {
+            "S": "stopped"
+        },
+        "monitoring": {
+            "S": "False"
+        }
+    },
+    "Item3": {
+        "hostname": {
+            "S": "AWSAMA3"
+        },
+        "os": {
+            "S": "amazonlinux"
+        },
+        "region": {
+            "S": "us-west-3"
+        },
+        "ipaddress": {
+            "S": "10.26.92.158"
+        },
+        "state": {
+            "S": "terminated"
+        },
+        "monitoring": {
+            "S": "True"
+        }
+    },
+    "Item4": {
+        "hostname": {
+            "S": "AWSRHE4"
+        },
+        "os": {
+            "S": "rhel"
+        },
+        "region": {
+            "S": "eu-west-2"
+        },
+        "ipaddress": {
+            "S": "10.198.151.8"
+        },
+        "state": {
+            "S": "terminated"
+        },
+        "monitoring": {
+            "S": "True"
+        }
+    },
+    "Item5": {
+        "hostname": {
+            "S": "AWSDEB5"
+        },
+        "os": {
+            "S": "debian"
+        },
+        "region": {
+            "S": "us-west-4"
+        },
+        "ipaddress": {
+            "S": "10.221.6.159"
+        },
+        "state": {
+            "S": "terminated"
+        },
+        "monitoring": {
+            "S": "False"
+        }
+    },
+    "Item6": {
+        "hostname": {
+            "S": "AWSRHE6"
+        },
+        "os": {
+            "S": "rhel"
+        },
+        "region": {
+            "S": "us-west-2"
+        },
+        "ipaddress": {
+            "S": "10.57.246.85"
+        },
+        "state": {
+            "S": "running"
+        },
+        "monitoring": {
+            "S": "True"
+        }
+    },
+    "Item7": {
+        "hostname": {
+            "S": "AWSUBU7"
+        },
+        "os": {
+            "S": "ubuntu"
+        },
+        "region": {
+            "S": "eu-west-4"
+        },
+        "ipaddress": {
+            "S": "10.153.38.179"
+        },
+        "state": {
+            "S": "running"
+        },
+        "monitoring": {
+            "S": "False"
+        }
+    },
+    "Item8": {
+        "hostname": {
+            "S": "AWSRHE8"
+        },
+        "os": {
+            "S": "rhel"
+        },
+        "region": {
+            "S": "eu-west-1"
+        },
+        "ipaddress": {
+            "S": "10.108.22.12"
+        },
+        "state": {
+            "S": "running"
+        },
+        "monitoring": {
+            "S": "False"
+        }
+    },
+    "Item9": {
+        "hostname": {
+            "S": "AWSRHE9"
+        },
+        "os": {
+            "S": "rhel"
+        },
+        "region": {
+            "S": "eu-west-1"
+        },
+        "ipaddress": {
+            "S": "10.49.36.112"
+        },
+        "state": {
+            "S": "terminated"
+        },
+        "monitoring": {
+            "S": "True"
+        }
+    },
+    "Item10": {
+        "hostname": {
+            "S": "AWSRHE10"
+        },
+        "os": {
+            "S": "rhel"
+        },
+        "region": {
+            "S": "us-west-4"
+        },
+        "ipaddress": {
+            "S": "10.211.130.113"
+        },
+        "state": {
+            "S": "running"
+        },
+        "monitoring": {
+            "S": "False"
+        }
+    },
+    "Item11": {
+        "hostname": {
+            "S": "AWSAMA11"
+        },
+        "os": {
+            "S": "amazonlinux"
+        },
+        "region": {
+            "S": "eu-west-3"
+        },
+        "ipaddress": {
+            "S": "10.35.197.20"
+        },
+        "state": {
+            "S": "running"
+        },
+        "monitoring": {
+            "S": "False"
+        }
+    },
+    "Item12": {
+        "hostname": {
+            "S": "AWSUBU12"
+        },
+        "os": {
+            "S": "ubuntu"
+        },
+        "region": {
+            "S": "us-west-4"
+        },
+        "ipaddress": {
+            "S": "10.201.204.59"
+        },
+        "state": {
+            "S": "terminated"
+        },
+        "monitoring": {
+            "S": "False"
+        }
+    },
+    "Item13": {
+        "hostname": {
+            "S": "AWSUBU13"
+        },
+        "os": {
+            "S": "ubuntu"
+        },
+        "region": {
+            "S": "us-west-4"
+        },
+        "ipaddress": {
+            "S": "10.47.186.239"
+        },
+        "state": {
+            "S": "stopped"
+        },
+        "monitoring": {
+            "S": "True"
+        }
+    },
+    "Item14": {
+        "hostname": {
+            "S": "AWSRHE14"
+        },
+        "os": {
+            "S": "rhel"
+        },
+        "region": {
+            "S": "us-west-2"
+        },
+        "ipaddress": {
+            "S": "10.246.208.86"
+        },
+        "state": {
+            "S": "stopped"
+        },
+        "monitoring": {
+            "S": "True"
+        }
+    },
+    "Item15": {
+        "hostname": {
+            "S": "AWSUBU15"
+        },
+        "os": {
+            "S": "ubuntu"
+        },
+        "region": {
+            "S": "eu-west-2"
+        },
+        "ipaddress": {
+            "S": "10.73.231.178"
+        },
+        "state": {
+            "S": "running"
+        },
+        "monitoring": {
+            "S": "True"
+        }
+    },
+    "Item16": {
+        "hostname": {
+            "S": "AWSRHE16"
+        },
+        "os": {
+            "S": "rhel"
+        },
+        "region": {
+            "S": "us-west-2"
+        },
+        "ipaddress": {
+            "S": "10.190.130.160"
+        },
+        "state": {
+            "S": "stopped"
+        },
+        "monitoring": {
+            "S": "True"
+        }
+    },
+    "Item17": {
+        "hostname": {
+            "S": "AWSRHE17"
+        },
+        "os": {
+            "S": "rhel"
+        },
+        "region": {
+            "S": "eu-west-3"
+        },
+        "ipaddress": {
+            "S": "10.241.165.53"
+        },
+        "state": {
+            "S": "stopped"
+        },
+        "monitoring": {
+            "S": "False"
+        }
+    },
+    "Item18": {
+        "hostname": {
+            "S": "AWSDEB18"
+        },
+        "os": {
+            "S": "debian"
+        },
+        "region": {
+            "S": "us-west-1"
+        },
+        "ipaddress": {
+            "S": "10.149.12.185"
+        },
+        "state": {
+            "S": "terminated"
+        },
+        "monitoring": {
+            "S": "False"
+        }
+    },
+    "Item19": {
+        "hostname": {
+            "S": "AWSAMA19"
+        },
+        "os": {
+            "S": "amazonlinux"
+        },
+        "region": {
+            "S": "eu-west-1"
+        },
+        "ipaddress": {
+            "S": "10.80.165.188"
+        },
+        "state": {
+            "S": "terminated"
+        },
+        "monitoring": {
+            "S": "True"
+        }
+    },
+    "Item20": {
+        "hostname": {
+            "S": "AWSDEB20"
+        },
+        "os": {
+            "S": "debian"
+        },
+        "region": {
+            "S": "eu-west-4"
+        },
+        "ipaddress": {
+            "S": "10.42.21.212"
+        },
+        "state": {
+            "S": "stopped"
+        },
+        "monitoring": {
+            "S": "True"
+        }
+    },
+    "Item21": {
+        "hostname": {
+            "S": "AWSAMA21"
+        },
+        "os": {
+            "S": "amazonlinux"
+        },
+        "region": {
+            "S": "us-west-1"
+        },
+        "ipaddress": {
+            "S": "10.116.157.164"
+        },
+        "state": {
+            "S": "terminated"
+        },
+        "monitoring": {
+            "S": "True"
+        }
+    },
+    "Item22": {
+        "hostname": {
+            "S": "AWSAMA22"
+        },
+        "os": {
+            "S": "amazonlinux"
+        },
+        "region": {
+            "S": "us-west-3"
+        },
+        "ipaddress": {
+            "S": "10.201.102.247"
+        },
+        "state": {
+            "S": "running"
+        },
+        "monitoring": {
+            "S": "True"
+        }
+    },
+    "Item23": {
+        "hostname": {
+            "S": "AWSDEB23"
+        },
+        "os": {
+            "S": "debian"
+        },
+        "region": {
+            "S": "us-west-3"
+        },
+        "ipaddress": {
+            "S": "10.96.227.102"
+        },
+        "state": {
+            "S": "stopped"
+        },
+        "monitoring": {
+            "S": "True"
+        }
+    },
+    "Item24": {
+        "hostname": {
+            "S": "AWSUBU24"
+        },
+        "os": {
+            "S": "ubuntu"
+        },
+        "region": {
+            "S": "us-west-4"
+        },
+        "ipaddress": {
+            "S": "10.132.22.165"
+        },
+        "state": {
+            "S": "terminated"
+        },
+        "monitoring": {
+            "S": "False"
+        }
+    },
+    "Item25": {
+        "hostname": {
+            "S": "AWSAMA25"
+        },
+        "os": {
+            "S": "amazonlinux"
+        },
+        "region": {
+            "S": "us-west-1"
+        },
+        "ipaddress": {
+            "S": "10.150.51.75"
+        },
+        "state": {
+            "S": "running"
+        },
+        "monitoring": {
+            "S": "False"
+        }
+    },
+    "Item26": {
+        "hostname": {
+            "S": "AWSDEB26"
+        },
+        "os": {
+            "S": "debian"
+        },
+        "region": {
+            "S": "eu-west-1"
+        },
+        "ipaddress": {
+            "S": "10.186.43.79"
+        },
+        "state": {
+            "S": "terminated"
+        },
+        "monitoring": {
+            "S": "True"
+        }
+    },
+    "Item27": {
+        "hostname": {
+            "S": "AWSAMA27"
+        },
+        "os": {
+            "S": "amazonlinux"
+        },
+        "region": {
+            "S": "eu-west-2"
+        },
+        "ipaddress": {
+            "S": "10.75.77.254"
+        },
+        "state": {
+            "S": "terminated"
+        },
+        "monitoring": {
+            "S": "False"
+        }
+    },
+    "Item28": {
+        "hostname": {
+            "S": "AWSAMA28"
+        },
+        "os": {
+            "S": "amazonlinux"
+        },
+        "region": {
+            "S": "eu-west-4"
+        },
+        "ipaddress": {
+            "S": "10.54.154.34"
+        },
+        "state": {
+            "S": "running"
+        },
+        "monitoring": {
+            "S": "False"
+        }
+    },
+    "Item29": {
+        "hostname": {
+            "S": "AWSRHE29"
+        },
+        "os": {
+            "S": "rhel"
+        },
+        "region": {
+            "S": "us-west-2"
+        },
+        "ipaddress": {
+            "S": "10.36.21.101"
+        },
+        "state": {
+            "S": "stopped"
+        },
+        "monitoring": {
+            "S": "True"
+        }
+    },
+    "Item30": {
+        "hostname": {
+            "S": "AWSDEB30"
+        },
+        "os": {
+            "S": "debian"
+        },
+        "region": {
+            "S": "eu-west-2"
+        },
+        "ipaddress": {
+            "S": "10.36.109.128"
+        },
+        "state": {
+            "S": "running"
+        },
+        "monitoring": {
+            "S": "False"
+        }
+    },
+    "Item31": {
+        "hostname": {
+            "S": "AWSAMA31"
+        },
+        "os": {
+            "S": "amazonlinux"
+        },
+        "region": {
+            "S": "eu-west-3"
+        },
+        "ipaddress": {
+            "S": "10.241.234.244"
+        },
+        "state": {
+            "S": "running"
+        },
+        "monitoring": {
+            "S": "True"
+        }
+    },
+    "Item32": {
+        "hostname": {
+            "S": "AWSUBU32"
+        },
+        "os": {
+            "S": "ubuntu"
+        },
+        "region": {
+            "S": "eu-west-2"
+        },
+        "ipaddress": {
+            "S": "10.102.135.172"
+        },
+        "state": {
+            "S": "running"
+        },
+        "monitoring": {
+            "S": "False"
+        }
+    },
+    "Item33": {
+        "hostname": {
+            "S": "AWSUBU33"
+        },
+        "os": {
+            "S": "ubuntu"
+        },
+        "region": {
+            "S": "us-west-2"
+        },
+        "ipaddress": {
+            "S": "10.184.158.3"
+        },
+        "state": {
+            "S": "terminated"
+        },
+        "monitoring": {
+            "S": "True"
+        }
+    },
+    "Item34": {
+        "hostname": {
+            "S": "AWSDEB34"
+        },
+        "os": {
+            "S": "debian"
+        },
+        "region": {
+            "S": "us-west-2"
+        },
+        "ipaddress": {
+            "S": "10.73.120.183"
+        },
+        "state": {
+            "S": "running"
+        },
+        "monitoring": {
+            "S": "False"
+        }
+    },
+    "Item35": {
+        "hostname": {
+            "S": "AWSUBU35"
+        },
+        "os": {
+            "S": "ubuntu"
+        },
+        "region": {
+            "S": "eu-west-1"
+        },
+        "ipaddress": {
+            "S": "10.137.172.52"
+        },
+        "state": {
+            "S": "terminated"
+        },
+        "monitoring": {
+            "S": "True"
+        }
+    },
+    "Item36": {
+        "hostname": {
+            "S": "AWSUBU36"
+        },
+        "os": {
+            "S": "ubuntu"
+        },
+        "region": {
+            "S": "eu-west-4"
+        },
+        "ipaddress": {
+            "S": "10.169.157.193"
+        },
+        "state": {
+            "S": "running"
+        },
+        "monitoring": {
+            "S": "False"
+        }
+    },
+    "Item37": {
+        "hostname": {
+            "S": "AWSAMA37"
+        },
+        "os": {
+            "S": "amazonlinux"
+        },
+        "region": {
+            "S": "eu-west-2"
+        },
+        "ipaddress": {
+            "S": "10.173.244.182"
+        },
+        "state": {
+            "S": "stopped"
+        },
+        "monitoring": {
+            "S": "True"
+        }
+    },
+    "Item38": {
+        "hostname": {
+            "S": "AWSDEB38"
+        },
+        "os": {
+            "S": "debian"
+        },
+        "region": {
+            "S": "eu-west-2"
+        },
+        "ipaddress": {
+            "S": "10.70.201.162"
+        },
+        "state": {
+            "S": "stopped"
+        },
+        "monitoring": {
+            "S": "False"
+        }
+    },
+    "Item39": {
+        "hostname": {
+            "S": "AWSAMA39"
+        },
+        "os": {
+            "S": "amazonlinux"
+        },
+        "region": {
+            "S": "eu-west-1"
+        },
+        "ipaddress": {
+            "S": "10.87.112.234"
+        },
+        "state": {
+            "S": "terminated"
+        },
+        "monitoring": {
+            "S": "True"
+        }
+    },
+    "Item40": {
+        "hostname": {
+            "S": "AWSUBU40"
+        },
+        "os": {
+            "S": "ubuntu"
+        },
+        "region": {
+            "S": "us-west-3"
+        },
+        "ipaddress": {
+            "S": "10.200.175.167"
+        },
+        "state": {
+            "S": "running"
+        },
+        "monitoring": {
+            "S": "False"
+        }
+    },
+    "Item41": {
+        "hostname": {
+            "S": "AWSDEB41"
+        },
+        "os": {
+            "S": "debian"
+        },
+        "region": {
+            "S": "eu-west-1"
+        },
+        "ipaddress": {
+            "S": "10.144.122.200"
+        },
+        "state": {
+            "S": "terminated"
+        },
+        "monitoring": {
+            "S": "True"
+        }
+    },
+    "Item42": {
+        "hostname": {
+            "S": "AWSUBU42"
+        },
+        "os": {
+            "S": "ubuntu"
+        },
+        "region": {
+            "S": "us-west-3"
+        },
+        "ipaddress": {
+            "S": "10.206.10.21"
+        },
+        "state": {
+            "S": "stopped"
+        },
+        "monitoring": {
+            "S": "False"
+        }
+    },
+    "Item43": {
+        "hostname": {
+            "S": "AWSUBU43"
+        },
+        "os": {
+            "S": "ubuntu"
+        },
+        "region": {
+            "S": "eu-west-4"
+        },
+        "ipaddress": {
+            "S": "10.205.81.126"
+        },
+        "state": {
+            "S": "running"
+        },
+        "monitoring": {
+            "S": "True"
+        }
+    },
+    "Item44": {
+        "hostname": {
+            "S": "AWSRHE44"
+        },
+        "os": {
+            "S": "rhel"
+        },
+        "region": {
+            "S": "eu-west-2"
+        },
+        "ipaddress": {
+            "S": "10.13.149.89"
+        },
+        "state": {
+            "S": "terminated"
+        },
+        "monitoring": {
+            "S": "False"
+        }
+    },
+    "Item45": {
+        "hostname": {
+            "S": "AWSUBU45"
+        },
+        "os": {
+            "S": "ubuntu"
+        },
+        "region": {
+            "S": "us-west-3"
+        },
+        "ipaddress": {
+            "S": "10.213.240.93"
+        },
+        "state": {
+            "S": "running"
+        },
+        "monitoring": {
+            "S": "False"
+        }
+    },
+    "Item46": {
+        "hostname": {
+            "S": "AWSAMA46"
+        },
+        "os": {
+            "S": "amazonlinux"
+        },
+        "region": {
+            "S": "eu-west-1"
+        },
+        "ipaddress": {
+            "S": "10.202.24.177"
+        },
+        "state": {
+            "S": "running"
+        },
+        "monitoring": {
+            "S": "True"
+        }
+    },
+    "Item47": {
+        "hostname": {
+            "S": "AWSUBU47"
+        },
+        "os": {
+            "S": "ubuntu"
+        },
+        "region": {
+            "S": "us-west-4"
+        },
+        "ipaddress": {
+            "S": "10.96.253.155"
+        },
+        "state": {
+            "S": "stopped"
+        },
+        "monitoring": {
+            "S": "False"
+        }
+    },
+    "Item48": {
+        "hostname": {
+            "S": "AWSUBU48"
+        },
+        "os": {
+            "S": "ubuntu"
+        },
+        "region": {
+            "S": "eu-west-4"
+        },
+        "ipaddress": {
+            "S": "10.59.148.99"
+        },
+        "state": {
+            "S": "running"
+        },
+        "monitoring": {
+            "S": "False"
+        }
+    },
+    "Item49": {
+        "hostname": {
+            "S": "AWSUBU49"
+        },
+        "os": {
+            "S": "ubuntu"
+        },
+        "region": {
+            "S": "eu-west-4"
+        },
+        "ipaddress": {
+            "S": "10.166.190.58"
+        },
+        "state": {
+            "S": "running"
+        },
+        "monitoring": {
+            "S": "True"
+        }
+    },
+    "Item50": {
+        "hostname": {
+            "S": "AWSUBU50"
+        },
+        "os": {
+            "S": "ubuntu"
+        },
+        "region": {
+            "S": "eu-west-4"
+        },
+        "ipaddress": {
+            "S": "10.123.137.45"
+        },
+        "state": {
+            "S": "stopped"
+        },
+        "monitoring": {
+            "S": "True"
+        }
+    },
+    "Item51": {
+        "hostname": {
+            "S": "AWSAMA51"
+        },
+        "os": {
+            "S": "amazonlinux"
+        },
+        "region": {
+            "S": "eu-west-3"
+        },
+        "ipaddress": {
+            "S": "10.248.189.44"
+        },
+        "state": {
+            "S": "running"
+        },
+        "monitoring": {
+            "S": "False"
+        }
+    },
+    "Item52": {
+        "hostname": {
+            "S": "AWSDEB52"
+        },
+        "os": {
+            "S": "debian"
+        },
+        "region": {
+            "S": "us-west-2"
+        },
+        "ipaddress": {
+            "S": "10.81.175.157"
+        },
+        "state": {
+            "S": "stopped"
+        },
+        "monitoring": {
+            "S": "False"
+        }
+    },
+    "Item53": {
+        "hostname": {
+            "S": "AWSRHE53"
+        },
+        "os": {
+            "S": "rhel"
+        },
+        "region": {
+            "S": "us-west-1"
+        },
+        "ipaddress": {
+            "S": "10.156.207.188"
+        },
+        "state": {
+            "S": "stopped"
+        },
+        "monitoring": {
+            "S": "True"
+        }
+    },
+    "Item54": {
+        "hostname": {
+            "S": "AWSAMA54"
+        },
+        "os": {
+            "S": "amazonlinux"
+        },
+        "region": {
+            "S": "us-west-1"
+        },
+        "ipaddress": {
+            "S": "10.121.27.191"
+        },
+        "state": {
+            "S": "terminated"
+        },
+        "monitoring": {
+            "S": "False"
+        }
+    },
+    "Item55": {
+        "hostname": {
+            "S": "AWSAMA55"
+        },
+        "os": {
+            "S": "amazonlinux"
+        },
+        "region": {
+            "S": "eu-west-2"
+        },
+        "ipaddress": {
+            "S": "10.37.91.11"
+        },
+        "state": {
+            "S": "terminated"
+        },
+        "monitoring": {
+            "S": "True"
+        }
+    },
+    "Item56": {
+        "hostname": {
+            "S": "AWSAMA56"
+        },
+        "os": {
+            "S": "amazonlinux"
+        },
+        "region": {
+            "S": "eu-west-2"
+        },
+        "ipaddress": {
+            "S": "10.197.126.86"
+        },
+        "state": {
+            "S": "terminated"
+        },
+        "monitoring": {
+            "S": "False"
+        }
+    },
+    "Item57": {
+        "hostname": {
+            "S": "AWSDEB57"
+        },
+        "os": {
+            "S": "debian"
+        },
+        "region": {
+            "S": "eu-west-2"
+        },
+        "ipaddress": {
+            "S": "10.127.130.155"
+        },
+        "state": {
+            "S": "terminated"
+        },
+        "monitoring": {
+            "S": "True"
+        }
+    },
+    "Item58": {
+        "hostname": {
+            "S": "AWSDEB58"
+        },
+        "os": {
+            "S": "debian"
+        },
+        "region": {
+            "S": "us-west-1"
+        },
+        "ipaddress": {
+            "S": "10.241.3.231"
+        },
+        "state": {
+            "S": "running"
+        },
+        "monitoring": {
+            "S": "True"
+        }
+    },
+    "Item59": {
+        "hostname": {
+            "S": "AWSRHE59"
+        },
+        "os": {
+            "S": "rhel"
+        },
+        "region": {
+            "S": "us-west-4"
+        },
+        "ipaddress": {
+            "S": "10.244.200.245"
+        },
+        "state": {
+            "S": "running"
+        },
+        "monitoring": {
+            "S": "True"
+        }
+    },
+    "Item60": {
+        "hostname": {
+            "S": "AWSAMA60"
+        },
+        "os": {
+            "S": "amazonlinux"
+        },
+        "region": {
+            "S": "eu-west-4"
+        },
+        "ipaddress": {
+            "S": "10.91.191.91"
+        },
+        "state": {
+            "S": "terminated"
+        },
+        "monitoring": {
+            "S": "False"
+        }
+    },
+    "Item61": {
+        "hostname": {
+            "S": "AWSAMA61"
+        },
+        "os": {
+            "S": "amazonlinux"
+        },
+        "region": {
+            "S": "eu-west-2"
+        },
+        "ipaddress": {
+            "S": "10.15.70.205"
+        },
+        "state": {
+            "S": "stopped"
+        },
+        "monitoring": {
+            "S": "True"
+        }
+    },
+    "Item62": {
+        "hostname": {
+            "S": "AWSRHE62"
+        },
+        "os": {
+            "S": "rhel"
+        },
+        "region": {
+            "S": "us-west-3"
+        },
+        "ipaddress": {
+            "S": "10.141.26.13"
+        },
+        "state": {
+            "S": "stopped"
+        },
+        "monitoring": {
+            "S": "False"
+        }
+    },
+    "Item63": {
+        "hostname": {
+            "S": "AWSRHE63"
+        },
+        "os": {
+            "S": "rhel"
+        },
+        "region": {
+            "S": "eu-west-4"
+        },
+        "ipaddress": {
+            "S": "10.202.60.2"
+        },
+        "state": {
+            "S": "stopped"
+        },
+        "monitoring": {
+            "S": "False"
+        }
+    },
+    "Item64": {
+        "hostname": {
+            "S": "AWSUBU64"
+        },
+        "os": {
+            "S": "ubuntu"
+        },
+        "region": {
+            "S": "eu-west-1"
+        },
+        "ipaddress": {
+            "S": "10.67.140.54"
+        },
+        "state": {
+            "S": "terminated"
+        },
+        "monitoring": {
+            "S": "False"
+        }
+    },
+    "Item65": {
+        "hostname": {
+            "S": "AWSRHE65"
+        },
+        "os": {
+            "S": "rhel"
+        },
+        "region": {
+            "S": "us-west-1"
+        },
+        "ipaddress": {
+            "S": "10.220.134.17"
+        },
+        "state": {
+            "S": "running"
+        },
+        "monitoring": {
+            "S": "False"
+        }
+    },
+    "Item66": {
+        "hostname": {
+            "S": "AWSDEB66"
+        },
+        "os": {
+            "S": "debian"
+        },
+        "region": {
+            "S": "eu-west-2"
+        },
+        "ipaddress": {
+            "S": "10.251.141.10"
+        },
+        "state": {
+            "S": "stopped"
+        },
+        "monitoring": {
+            "S": "False"
+        }
+    },
+    "Item67": {
+        "hostname": {
+            "S": "AWSRHE67"
+        },
+        "os": {
+            "S": "rhel"
+        },
+        "region": {
+            "S": "us-west-2"
+        },
+        "ipaddress": {
+            "S": "10.149.71.223"
+        },
+        "state": {
+            "S": "stopped"
+        },
+        "monitoring": {
+            "S": "False"
+        }
+    },
+    "Item68": {
+        "hostname": {
+            "S": "AWSDEB68"
+        },
+        "os": {
+            "S": "debian"
+        },
+        "region": {
+            "S": "eu-west-1"
+        },
+        "ipaddress": {
+            "S": "10.169.160.202"
+        },
+        "state": {
+            "S": "stopped"
+        },
+        "monitoring": {
+            "S": "True"
+        }
+    },
+    "Item69": {
+        "hostname": {
+            "S": "AWSAMA69"
+        },
+        "os": {
+            "S": "amazonlinux"
+        },
+        "region": {
+            "S": "us-west-2"
+        },
+        "ipaddress": {
+            "S": "10.94.159.93"
+        },
+        "state": {
+            "S": "running"
+        },
+        "monitoring": {
+            "S": "True"
+        }
+    },
+    "Item70": {
+        "hostname": {
+            "S": "AWSUBU70"
+        },
+        "os": {
+            "S": "ubuntu"
+        },
+        "region": {
+            "S": "eu-west-2"
+        },
+        "ipaddress": {
+            "S": "10.163.241.158"
+        },
+        "state": {
+            "S": "terminated"
+        },
+        "monitoring": {
+            "S": "False"
+        }
+    },
+    "Item71": {
+        "hostname": {
+            "S": "AWSUBU71"
+        },
+        "os": {
+            "S": "ubuntu"
+        },
+        "region": {
+            "S": "us-west-3"
+        },
+        "ipaddress": {
+            "S": "10.94.203.78"
+        },
+        "state": {
+            "S": "terminated"
+        },
+        "monitoring": {
+            "S": "False"
+        }
+    },
+    "Item72": {
+        "hostname": {
+            "S": "AWSAMA72"
+        },
+        "os": {
+            "S": "amazonlinux"
+        },
+        "region": {
+            "S": "eu-west-1"
+        },
+        "ipaddress": {
+            "S": "10.175.213.228"
+        },
+        "state": {
+            "S": "running"
+        },
+        "monitoring": {
+            "S": "True"
+        }
+    },
+    "Item73": {
+        "hostname": {
+            "S": "AWSUBU73"
+        },
+        "os": {
+            "S": "ubuntu"
+        },
+        "region": {
+            "S": "eu-west-3"
+        },
+        "ipaddress": {
+            "S": "10.85.85.218"
+        },
+        "state": {
+            "S": "stopped"
+        },
+        "monitoring": {
+            "S": "False"
+        }
+    },
+    "Item74": {
+        "hostname": {
+            "S": "AWSUBU74"
+        },
+        "os": {
+            "S": "ubuntu"
+        },
+        "region": {
+            "S": "us-west-4"
+        },
+        "ipaddress": {
+            "S": "10.183.28.237"
+        },
+        "state": {
+            "S": "stopped"
+        },
+        "monitoring": {
+            "S": "True"
+        }
+    },
+    "Item75": {
+        "hostname": {
+            "S": "AWSDEB75"
+        },
+        "os": {
+            "S": "debian"
+        },
+        "region": {
+            "S": "us-west-3"
+        },
+        "ipaddress": {
+            "S": "10.225.74.190"
+        },
+        "state": {
+            "S": "terminated"
+        },
+        "monitoring": {
+            "S": "True"
+        }
+    },
+    "Item76": {
+        "hostname": {
+            "S": "AWSAMA76"
+        },
+        "os": {
+            "S": "amazonlinux"
+        },
+        "region": {
+            "S": "eu-west-2"
+        },
+        "ipaddress": {
+            "S": "10.57.244.62"
+        },
+        "state": {
+            "S": "terminated"
+        },
+        "monitoring": {
+            "S": "False"
+        }
+    },
+    "Item77": {
+        "hostname": {
+            "S": "AWSAMA77"
+        },
+        "os": {
+            "S": "amazonlinux"
+        },
+        "region": {
+            "S": "us-west-2"
+        },
+        "ipaddress": {
+            "S": "10.235.142.57"
+        },
+        "state": {
+            "S": "running"
+        },
+        "monitoring": {
+            "S": "True"
+        }
+    },
+    "Item78": {
+        "hostname": {
+            "S": "AWSUBU78"
+        },
+        "os": {
+            "S": "ubuntu"
+        },
+        "region": {
+            "S": "eu-west-1"
+        },
+        "ipaddress": {
+            "S": "10.97.159.80"
+        },
+        "state": {
+            "S": "terminated"
+        },
+        "monitoring": {
+            "S": "False"
+        }
+    },
+    "Item79": {
+        "hostname": {
+            "S": "AWSAMA79"
+        },
+        "os": {
+            "S": "amazonlinux"
+        },
+        "region": {
+            "S": "eu-west-2"
+        },
+        "ipaddress": {
+            "S": "10.180.158.254"
+        },
+        "state": {
+            "S": "stopped"
+        },
+        "monitoring": {
+            "S": "False"
+        }
+    },
+    "Item80": {
+        "hostname": {
+            "S": "AWSAMA80"
+        },
+        "os": {
+            "S": "amazonlinux"
+        },
+        "region": {
+            "S": "us-west-2"
+        },
+        "ipaddress": {
+            "S": "10.233.196.185"
+        },
+        "state": {
+            "S": "running"
+        },
+        "monitoring": {
+            "S": "True"
+        }
+    },
+    "Item81": {
+        "hostname": {
+            "S": "AWSAMA81"
+        },
+        "os": {
+            "S": "amazonlinux"
+        },
+        "region": {
+            "S": "eu-west-1"
+        },
+        "ipaddress": {
+            "S": "10.255.101.121"
+        },
+        "state": {
+            "S": "stopped"
+        },
+        "monitoring": {
+            "S": "False"
+        }
+    },
+    "Item82": {
+        "hostname": {
+            "S": "AWSDEB82"
+        },
+        "os": {
+            "S": "debian"
+        },
+        "region": {
+            "S": "us-west-1"
+        },
+        "ipaddress": {
+            "S": "10.42.88.192"
+        },
+        "state": {
+            "S": "stopped"
+        },
+        "monitoring": {
+            "S": "False"
+        }
+    },
+    "Item83": {
+        "hostname": {
+            "S": "AWSRHE83"
+        },
+        "os": {
+            "S": "rhel"
+        },
+        "region": {
+            "S": "us-west-3"
+        },
+        "ipaddress": {
+            "S": "10.181.118.34"
+        },
+        "state": {
+            "S": "terminated"
+        },
+        "monitoring": {
+            "S": "False"
+        }
+    },
+    "Item84": {
+        "hostname": {
+            "S": "AWSAMA84"
+        },
+        "os": {
+            "S": "amazonlinux"
+        },
+        "region": {
+            "S": "us-west-4"
+        },
+        "ipaddress": {
+            "S": "10.50.24.60"
+        },
+        "state": {
+            "S": "running"
+        },
+        "monitoring": {
+            "S": "True"
+        }
+    },
+    "Item85": {
+        "hostname": {
+            "S": "AWSAMA85"
+        },
+        "os": {
+            "S": "amazonlinux"
+        },
+        "region": {
+            "S": "us-west-1"
+        },
+        "ipaddress": {
+            "S": "10.170.231.127"
+        },
+        "state": {
+            "S": "stopped"
+        },
+        "monitoring": {
+            "S": "True"
+        }
+    },
+    "Item86": {
+        "hostname": {
+            "S": "AWSDEB86"
+        },
+        "os": {
+            "S": "debian"
+        },
+        "region": {
+            "S": "eu-west-4"
+        },
+        "ipaddress": {
+            "S": "10.47.254.80"
+        },
+        "state": {
+            "S": "running"
+        },
+        "monitoring": {
+            "S": "False"
+        }
+    },
+    "Item87": {
+        "hostname": {
+            "S": "AWSDEB87"
+        },
+        "os": {
+            "S": "debian"
+        },
+        "region": {
+            "S": "eu-west-1"
+        },
+        "ipaddress": {
+            "S": "10.207.109.136"
+        },
+        "state": {
+            "S": "terminated"
+        },
+        "monitoring": {
+            "S": "True"
+        }
+    },
+    "Item88": {
+        "hostname": {
+            "S": "AWSDEB88"
+        },
+        "os": {
+            "S": "debian"
+        },
+        "region": {
+            "S": "us-west-4"
+        },
+        "ipaddress": {
+            "S": "10.225.224.41"
+        },
+        "state": {
+            "S": "running"
+        },
+        "monitoring": {
+            "S": "False"
+        }
+    },
+    "Item89": {
+        "hostname": {
+            "S": "AWSAMA89"
+        },
+        "os": {
+            "S": "amazonlinux"
+        },
+        "region": {
+            "S": "eu-west-1"
+        },
+        "ipaddress": {
+            "S": "10.161.140.172"
+        },
+        "state": {
+            "S": "running"
+        },
+        "monitoring": {
+            "S": "True"
+        }
+    },
+    "Item90": {
+        "hostname": {
+            "S": "AWSUBU90"
+        },
+        "os": {
+            "S": "ubuntu"
+        },
+        "region": {
+            "S": "eu-west-2"
+        },
+        "ipaddress": {
+            "S": "10.186.204.153"
+        },
+        "state": {
+            "S": "terminated"
+        },
+        "monitoring": {
+            "S": "True"
+        }
+    },
+    "Item91": {
+        "hostname": {
+            "S": "AWSAMA91"
+        },
+        "os": {
+            "S": "amazonlinux"
+        },
+        "region": {
+            "S": "eu-west-3"
+        },
+        "ipaddress": {
+            "S": "10.35.161.244"
+        },
+        "state": {
+            "S": "running"
+        },
+        "monitoring": {
+            "S": "False"
+        }
+    },
+    "Item92": {
+        "hostname": {
+            "S": "AWSUBU92"
+        },
+        "os": {
+            "S": "ubuntu"
+        },
+        "region": {
+            "S": "eu-west-2"
+        },
+        "ipaddress": {
+            "S": "10.236.128.92"
+        },
+        "state": {
+            "S": "stopped"
+        },
+        "monitoring": {
+            "S": "False"
+        }
+    },
+    "Item93": {
+        "hostname": {
+            "S": "AWSAMA93"
+        },
+        "os": {
+            "S": "amazonlinux"
+        },
+        "region": {
+            "S": "eu-west-3"
+        },
+        "ipaddress": {
+            "S": "10.191.45.245"
+        },
+        "state": {
+            "S": "terminated"
+        },
+        "monitoring": {
+            "S": "True"
+        }
+    },
+    "Item94": {
+        "hostname": {
+            "S": "AWSDEB94"
+        },
+        "os": {
+            "S": "debian"
+        },
+        "region": {
+            "S": "us-west-3"
+        },
+        "ipaddress": {
+            "S": "10.46.240.4"
+        },
+        "state": {
+            "S": "stopped"
+        },
+        "monitoring": {
+            "S": "False"
+        }
+    },
+    "Item95": {
+        "hostname": {
+            "S": "AWSDEB95"
+        },
+        "os": {
+            "S": "debian"
+        },
+        "region": {
+            "S": "eu-west-2"
+        },
+        "ipaddress": {
+            "S": "10.13.216.77"
+        },
+        "state": {
+            "S": "stopped"
+        },
+        "monitoring": {
+            "S": "True"
+        }
+    },
+    "Item96": {
+        "hostname": {
+            "S": "AWSDEB96"
+        },
+        "os": {
+            "S": "debian"
+        },
+        "region": {
+            "S": "us-west-1"
+        },
+        "ipaddress": {
+            "S": "10.39.11.209"
+        },
+        "state": {
+            "S": "terminated"
+        },
+        "monitoring": {
+            "S": "True"
+        }
+    },
+    "Item97": {
+        "hostname": {
+            "S": "AWSRHE97"
+        },
+        "os": {
+            "S": "rhel"
+        },
+        "region": {
+            "S": "us-west-3"
+        },
+        "ipaddress": {
+            "S": "10.44.215.224"
+        },
+        "state": {
+            "S": "terminated"
+        },
+        "monitoring": {
+            "S": "False"
+        }
+    },
+    "Item98": {
+        "hostname": {
+            "S": "AWSRHE98"
+        },
+        "os": {
+            "S": "rhel"
+        },
+        "region": {
+            "S": "us-west-3"
+        },
+        "ipaddress": {
+            "S": "10.85.164.183"
+        },
+        "state": {
+            "S": "terminated"
+        },
+        "monitoring": {
+            "S": "False"
+        }
+    },
+    "Item99": {
+        "hostname": {
+            "S": "AWSDEB99"
+        },
+        "os": {
+            "S": "debian"
+        },
+        "region": {
+            "S": "us-west-4"
+        },
+        "ipaddress": {
+            "S": "10.241.160.230"
+        },
+        "state": {
+            "S": "running"
+        },
+        "monitoring": {
+            "S": "True"
+        }
+    },
+    "Item100": {
+        "hostname": {
+            "S": "AWSDEB100"
+        },
+        "os": {
+            "S": "debian"
+        },
+        "region": {
+            "S": "us-west-3"
+        },
+        "ipaddress": {
+            "S": "10.209.118.230"
+        },
+        "state": {
+            "S": "stopped"
+        },
+        "monitoring": {
+            "S": "False"
+        }
+    }
+}
