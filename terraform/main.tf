@@ -12,7 +12,7 @@ provider "aws" {}
 
 
 locals {
-  json_items = file("./items.json")
+  json_items = file(var.items)
   items      = jsondecode(local.json_items)
 }
 
