@@ -28,13 +28,51 @@ variable "apigw" {
   type = object({
     name        = string
     description = string
+    endpoint    = string
     stage       = string
   })
 
   default = {
     "name": "api-assets",
     "description": "This is a serverless API for demonstration purposes."
+    "endpoint": "REGIONAL"
     "stage": "dev"
+  }
+}
+
+
+variable "apigw_apikey" {
+  description = "Api Gateway API key attributes."
+
+  type = object({
+    name        = string
+    description = string
+  })
+
+  default = {
+    "name": "AssetsApiKey",
+    "description": "Assets Api Key required to requests the API."
+  }
+}
+
+
+variable "apigw_plan" {
+  description = "ApiGateway usage plan attributes for requests limitation."
+
+  type = object({
+    name          = string
+    description   = string
+    quota_limit   = number
+    quota_offset  = number
+    quota_period  = string
+  })
+
+  default = {
+    "name": "AssetsApiKey",
+    "description": "API Key authentication to requests Assets API.",
+    "quota_limit": 100,
+    "quota_offset": 0,
+    "quota_period": "DAY"
   }
 }
 
