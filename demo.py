@@ -47,8 +47,8 @@ class Demo:
 
     def _items(self) -> list:
         """Get all available items in json file."""
-        
-        with open(self.items, "r") as file:
+
+        with open(self.items, "r", encoding="utf-8") as file:
             items = load(file)
 
         return [items[item]["hostname"]["S"] for item in items]
