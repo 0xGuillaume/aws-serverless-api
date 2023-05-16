@@ -1,3 +1,10 @@
+variable "items" {
+  description = "JSON file containing items."
+
+  type = string
+  default = "./data/items.json"
+}
+
 variable "dynamodb" {
   description = "DynamoDb instance attributes."
 
@@ -63,8 +70,8 @@ variable "lambda" {
   })
 
   default = {
-    "source_file": "../lambda/parser.py",
-    "output_file": "../lambda/lambda_function_payload.zip"
+    "source_file": "./lambda/parser.py",
+    "output_file": "./lambda/lambda_function_payload.zip"
     "role": "api-lambda-role"
   }
 }
