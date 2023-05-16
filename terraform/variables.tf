@@ -82,18 +82,21 @@ variable "apigw_methods" {
   description = "ApiGateway methods attributes."
 
   type = list(object({
-    name = string
-    path = string
+    name         = string
+    path         = string
+    key_required = bool
   }))
 
   default = [
     {
       "name" : "asset-scan",
-      "path" : "assets"
+      "path" : "assets",
+      "key_required" : true
     },
     {
       "name" : "asset-get-item",
-      "path" : "{hostname+}"
+      "path" : "{hostname+}",
+      "key_required" : true
     }
   ]
 }
