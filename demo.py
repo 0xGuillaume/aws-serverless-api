@@ -10,7 +10,9 @@ from requests import get as request
 from colorama import Fore
 
 
-parser = ArgumentParser()
+parser = ArgumentParser(
+    description="Run X HTTP requests to query AWS Serverless API built via IaC."
+)
 
 parser.add_argument(
     "-a", "--amount",
