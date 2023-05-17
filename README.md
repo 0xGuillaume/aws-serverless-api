@@ -29,7 +29,7 @@ _DummyAssetsAPI_ API Gateway provides a REST API with 2 GET methods :
 Both of these methods **required an API Key**. The **API Key** is given by the terraform outputs. Because `api_key` output is **sensitive** you should run the bellow command :
 
 ```bash
-terraform outputs --json
+$ terraform outputs --json # `| jq` For a better render.
 ```
 
 ## DynamoDB
@@ -56,7 +56,7 @@ To use a new set of DynamoDB items, you can run `./terraform/data/random_items.p
 > **NOTE :** You are **required** to use `--amount` argument which set the amount of items you want to generate.
 
 ```bash
-python3 random_items.py --amount 500
+$ python3 random_items.py --amount 500
 ```
 
 ## Demo
@@ -80,11 +80,9 @@ $ export AWS_REGION="eu-west-1" # Or any other region you want to use.
 One you correctly configure the AWS provider run following commands.
 
 ```bash
-cd terraform/
-
-terraform init
-
-terraform apply --auto-approve
+$ cd terraform/
+$ terraform init
+$ terraform apply --auto-approve
 ```
 
 ### Auto requests
@@ -94,11 +92,11 @@ You can run `demo.py` file in order to send automated requests. The script rando
 > **NOTE :** You are **required** to set the amount of requests you want to send while running the script.
 
 ```bash
-python3 demo.py --amount 50
+$ python3 demo.py --amount 50
 ```
 
 Also there is by default a **one second interval** between each request but you can set your own interval.
 
 ```bash
-python3 demo.py --amount 50 --interval 0
+$ python3 demo.py --amount 50 --interval 0
 ```
