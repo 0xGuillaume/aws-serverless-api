@@ -1,5 +1,6 @@
 # DummyAssets Terraform
 
+```bash
 .
 ├── data
 │   ├── items.json
@@ -13,4 +14,4 @@
 ├── outputs.tf
 ├── README.md
 └── variables.tf
-
+```
