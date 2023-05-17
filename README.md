@@ -9,11 +9,11 @@
 
 _DummyAssets_ is a serverless API powered by AWS. It is based on 3 services : 
 
-- [Api Gateway](https://aws.amazon.com/fr/api-gateway/) : 
+- [Api Gateway](https://aws.amazon.com/fr/api-gateway/) : Provides RESTful API with 2 GET methods.
 
-- Lambda : 
+- [Lambda](https://aws.amazon.com/fr/lambda/) : Python functions to query DynamoDB items based on Api Gatewway requests.
 
-- DynamoDB : 
+- [DynamoDB](https://aws.amazon.com/fr/dynamodb/) : NoSQL database filled with dummy items (EC2 instances attributes).
 
 ## Description
 
