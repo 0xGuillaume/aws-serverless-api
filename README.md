@@ -11,6 +11,13 @@
 
 ## Api Gateway
 
+There is two URIs available.
+
+- `api-url/assets` : Returns all the DynamoDB items.
+
+- `api-url/{hostname}` : Returns the item attributes specified in the url path.
+
+
 ## DynamoDB
 
 ### Items format
