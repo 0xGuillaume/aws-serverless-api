@@ -11,12 +11,17 @@
 
 ## Api Gateway
 
-There is two URIs available.
+_Assets_ API Gateway provides a REST API with 2 GET methods :
 
 - `api-url/assets` : Returns all the DynamoDB items.
 
 - `api-url/{hostname}` : Returns the item attributes specified in the url path.
 
+Both of these methods required an **API Key** to be requested. The **API Key** is given by the terraform outputs. Because `api_key` output is **sensitive** you should run the bellow command :
+
+```bash
+terraform outputs --json
+```
 
 ## DynamoDB
 
@@ -37,9 +42,9 @@ DynamoDB table uses the bellow data format.
 
 ### Generate new items
 
-If you would like to use a new set of DynamoDB items, you can run `./terraform/data/random_items.py`. 
+To use a new set of DynamoDB items, you can run `./terraform/data/random_items.py`. 
 
-You required to use `--amount` argument to set the amount of items you want to generate.
+You are **required** to use `--amount` argument which set the amount of items you want to generate.
 
 ```bash
 python3 random_items.py --amount 500
