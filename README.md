@@ -17,6 +17,14 @@
 
 ### Generate new items
 
+If you would like to use a new set of DynamoDB items, you can run `./terraform/data/random_items.py`. 
+
+You required to use `--amount` argument to set the amount of items you want to generate.
+
+```bash
+python3 random_items.py --amount 500
+```
+
 ## Demo
 
 You can run `demo.py` file in order to send automated requests. The script randomly requests one of the two available URIs (`/assets` or `/{hostname}`).
