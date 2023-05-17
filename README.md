@@ -63,7 +63,21 @@ python3 random_items.py --amount 500
 
 ### Terraform
 
-To build up _DummyAssets_, you first need to install [Terraform](https://www.terraform.io/). Then run following commands.
+To build up _DummyAssets_, you first need to install [Terraform](https://www.terraform.io/). 
+
+Then there are several ways to authenticate and configure the AWS provider.
+
+This project has been built using the [Environment Variables](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#environment-variables) method. But you first need to create an **Access Key** with the appropriate rights.
+
+```bash
+$ export AWS_ACCESS_KEY_ID="anaccesskey"
+$ export AWS_SECRET_ACCESS_KEY="asecretkey"
+$ export AWS_REGION="eu-west-1" # Or any other region you want to use.
+```
+
+---
+
+One you correctly configure the AWS provider run following commands.
 
 ```bash
 cd terraform/
@@ -77,7 +91,7 @@ terraform apply --auto-approve
 
 You can run `demo.py` file in order to send automated requests. The script randomly requests one of the two available URIs (`/assets` or `/{hostname}`).
 
-You are **required** to set the amount of requests you want to send while running the script.
+> **NOTE :** You are **required** to set the amount of requests you want to send while running the script.
 
 ```bash
 python3 demo.py --amount 50
