@@ -19,3 +19,16 @@
 
 ## Demo
 
+You can run `demo.py` file in order to send automated requests. The script randomly requests one of the two available URIs (`/assets` or `/{hostname}`).
+
+You are **required** to set the amount of requests you want to send while running the script.
+
+```bash
+python3 demo.py --amount 50
+```
+
+Also there is by default a **one second interval** between each request but you can set your own interval.
+
+```bash
+python3 demo.py --amount 50 --interval 0
+```
