@@ -3,7 +3,7 @@
 ```bash
 .
 ├── data                        # Data files
-│   ├── items.json              # DynamoDN random dataset
+│   ├── items.json              # DynamoDB random dataset
 │   └── random_items.py         # Generate random DynamoDB items
 ├── lambda                      # Lambda code
 │   └── parser.py               # Lambda python functions
