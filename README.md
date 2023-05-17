@@ -29,7 +29,7 @@ _DummyAssetsAPI_ API Gateway provides a REST API with 2 GET methods :
 Both of these methods **required an API Key**. The **API Key** is given by the terraform outputs. Because `api_key` output is **sensitive** you should run the bellow command :
 
 ```bash
-$ terraform outputs --json # `| jq` For a better render.
+$ terraform outputs --json # `| jq` for a better render.
 ```
 
 ## DynamoDB
@@ -67,7 +67,7 @@ To build up _DummyAssets_, you first need to install [Terraform](https://www.ter
 
 Then there are several ways to authenticate and configure the AWS provider.
 
-This project has been built using the [Environment Variables](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#environment-variables) method. But you first need to create an **Access Key** with the appropriate rights.
+This project has been built using the [Environment Variables](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#environment-variables) method. But you first need to [create](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_credentials_access-keys.html#Using_CreateAccessKey) an **Access Key** with the appropriate permissions.
 
 ```bash
 $ export AWS_ACCESS_KEY_ID="anaccesskey"
