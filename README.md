@@ -13,9 +13,9 @@
 
 _Assets_ API Gateway provides a REST API with 2 GET methods :
 
-- `api-url/assets` : Returns all the DynamoDB items.
+- `api-url/stage/assets` : Returns all the DynamoDB items.
 
-- `api-url/{hostname}` : Returns the item attributes specified in the url path.
+- `api-url/stage/{hostname}` : Returns the item attributes specified in the url path.
 
 Both of these methods required an **API Key** to be requested. The **API Key** is given by the terraform outputs. Because `api_key` output is **sensitive** you should run the bellow command :
 
