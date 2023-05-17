@@ -7,17 +7,25 @@
 
 # Aws Api Serverless
 
+_DummyAssets_ is a serverless API powered by AWS. It is based on 3 services : 
+
+- [Api Gateway](https://aws.amazon.com/fr/api-gateway/) : 
+
+- Lambda : 
+
+- DynamoDB : 
+
 ## Description
 
 ## Api Gateway
 
 _DummyAssetsAPI_ API Gateway provides a REST API with 2 GET methods :
 
-- `api-url/stage/assets` : Returns all the DynamoDB items.
+- `api-url/stage/assets` : Returns all the DynamoDB items table.
 
-- `api-url/stage/{hostname}` : Returns the item specified in the url path.
+- `api-url/stage/{hostname}` : Returns the item specified in the path url.
 
-Both of these methods **required an API Key** to be requested. The **API Key** is given by the terraform outputs. Because `api_key` output is **sensitive** you should run the bellow command :
+Both of these methods **required an API Key**. The **API Key** is given by the terraform outputs. Because `api_key` output is **sensitive** you should run the bellow command :
 
 ```bash
 terraform outputs --json
