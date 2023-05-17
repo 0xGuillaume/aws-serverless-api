@@ -17,7 +17,7 @@ _Assets_ API Gateway provides a REST API with 2 GET methods :
 
 - `api-url/stage/{hostname}` : Returns the item attributes specified in the url path.
 
-Both of these methods required an **API Key** to be requested. The **API Key** is given by the terraform outputs. Because `api_key` output is **sensitive** you should run the bellow command :
+Both of these methods **required an API Key** to be requested. The **API Key** is given by the terraform outputs. Because `api_key` output is **sensitive** you should run the bellow command :
 
 ```bash
 terraform outputs --json
@@ -25,9 +25,9 @@ terraform outputs --json
 
 ## DynamoDB
 
-### Items format
+_DummyAssetsDDB_ is a DynamoDB (_NoSQL_) table filled with a random set of instances with random attributes values. 
 
-DynamoDB table uses the bellow data format.
+Each item table uses the bellow data format.
 
 ```json
 "Item1": {
