@@ -59,6 +59,20 @@ python3 random_items.py --amount 500
 
 ## Demo
 
+### Terraform
+
+To build up _DummyAssets_, you first need to install [Terraform](https://www.terraform.io/). Then run following commands.
+
+```bash
+cd terraform/
+
+terraform init
+
+terraform apply --auto-approve
+```
+
+### Auto requests
+
 You can run `demo.py` file in order to send automated requests. The script randomly requests one of the two available URIs (`/assets` or `/{hostname}`).
 
 You are **required** to set the amount of requests you want to send while running the script.
