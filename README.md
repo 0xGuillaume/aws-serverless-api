@@ -24,7 +24,7 @@ _DummyAssetsAPI_ API Gateway provides a REST API with 2 GET methods :
 
 - `api-url/stage/assets` : Returns all the DynamoDB items table.
 
-- `api-url/stage/{hostname}` : Returns the item specified in the path url.
+- `api-url/stage/{hostname}` : Returns the item specified in the path.
 
 Both of these methods **required an API Key**. The **API Key** is given by the terraform outputs. Because `api_key` output is **sensitive** you should run the bellow command :
 
@@ -53,7 +53,7 @@ Each table items use the bellow data format.
 
 To use a new set of DynamoDB items, you can run `./terraform/data/random_items.py`. 
 
-You are **required** to use `--amount` argument which set the amount of items you want to generate.
+> **NOTE :** You are **required** to use `--amount` argument which set the amount of items you want to generate.
 
 ```bash
 python3 random_items.py --amount 500
