@@ -7,6 +7,8 @@
 
 # Aws Api Serverless
 
+> This project has been built for development and test purpose.
+
 _DummyAssets_ is a serverless API powered by AWS. It is based on 3 services : 
 
 - [Api Gateway](https://aws.amazon.com/fr/api-gateway/) : Provides RESTful API with 2 GET methods.
