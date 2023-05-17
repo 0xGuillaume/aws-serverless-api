@@ -15,6 +15,19 @@
 
 ### Items format
 
+DynamoDB table uses the bellow data format.
+
+```json
+"Item1": {
+	"hostname": { "S": "AWSDEB1" },
+	"os": { "S": "debian" },
+	"region": { "S": "us-west-2" },
+	"ipaddress": { "S": "10.28.247.21" },
+	"state": { "S": "terminated" },
+	"monitoring": {	"S": "False" }
+}
+```
+
 ### Generate new items
 
 If you would like to use a new set of DynamoDB items, you can run `./terraform/data/random_items.py`. 
