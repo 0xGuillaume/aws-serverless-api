@@ -34,8 +34,8 @@ variable "apigw" {
   })
 
   default = {
-    "name" : "api-assets",
-    "description" : "This is a serverless API for demonstration purposes."
+    "name" : "DummyAssets",
+    "description" : "A serverless API for development and test purpose."
     "endpoint" : "REGIONAL"
     "stage" : "dev"
   }
@@ -69,7 +69,7 @@ variable "apigw_plan" {
   })
 
   default = {
-    "name" : "AssetsApiKey",
+    "name" : "DummyAssetsApiKey",
     "description" : "API Key authentication to requests Assets API.",
     "quota_limit" : 100,
     "quota_offset" : 0,
@@ -89,12 +89,12 @@ variable "apigw_methods" {
 
   default = [
     {
-      "name" : "asset-scan",
+      "name" : "dummy-assets-scan",
       "path" : "assets",
       "key_required" : true
     },
     {
-      "name" : "asset-get-item",
+      "name" : "dummy-asset-get-item",
       "path" : "{hostname+}",
       "key_required" : true
     }
@@ -114,7 +114,7 @@ variable "lambda" {
   default = {
     "source_file" : "./lambda/parser.py",
     "output_file" : "./lambda/lambda_function_payload.zip"
-    "role" : "api-lambda-role"
+    "role" : "DummyAssetsLambdaRole"
   }
 }
 
@@ -130,12 +130,12 @@ variable "lambda_handlers" {
 
   default = [
     {
-      "name" : "asset-scan",
+      "name" : "dummy-assets-scan",
       "runtime" : "python3.10",
       "handler" : "parser.scan"
     },
     {
-      "name" : "asset-get-item",
+      "name" : "dummy-asset-get-item",
       "runtime" : "python3.10",
       "handler" : "parser.get_item"
     }
