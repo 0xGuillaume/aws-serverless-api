@@ -13,8 +13,8 @@ data "aws_iam_policy_document" "assume_role" {
 
 
 resource "aws_iam_role" "iam_for_lambda" {
-  description        = "Allows lamba to perform Scan & Get-Item actions on DummyAssetsDDB."
-  name               = var.lambda.role
+  description        = var.lambda.role_description
+  name               = var.lambda.role_name
   assume_role_policy = data.aws_iam_policy_document.assume_role.json
 
   inline_policy {
