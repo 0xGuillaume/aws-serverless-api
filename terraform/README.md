@@ -21,7 +21,7 @@ Terraform files are based on deployed services to gain more readability and easi
 
 ## Dynamo DB and Lambdas
 
-Both `scan` and `get_item` lambdas are querying `DummyAssets` _DyamoDB_ table. So if you would like to change the table name for your own needs, you have to update the value in **two** different file.
+Both `scan` and `get_item` lambdas are querying _DyamoDB_ `DummyAssets` table. So if you would like to change the table name for your own needs, you have to update the value in **two** different file.
 
 - `variables.tf` : `name` key in `dynamodb` variable block.
 ```terraform
