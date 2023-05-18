@@ -1,5 +1,7 @@
 # DummyAssets Terraform
 
+Terraform files are based on deployed services to gain more readability and easier management. 
+
 ```bash
 .
 ├── data                        # Data files
