@@ -123,19 +123,22 @@ variable "lambda_handlers" {
   description = "Lambdas handlers attributes."
 
   type = list(object({
-    name    = string
-    runtime = string
-    handler = string
+    name        = string
+    description = string
+    runtime     = string
+    handler     = string
   }))
 
   default = [
     {
       "name" : "dummy-assets-scan",
+      "description": "Scan all DummyAssets items.",
       "runtime" : "python3.10",
       "handler" : "parser.scan"
     },
     {
       "name" : "dummy-asset-get-item",
+      "description": "Get a single DummyAssets item.",
       "runtime" : "python3.10",
       "handler" : "parser.get_item"
     }
