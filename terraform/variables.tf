@@ -16,7 +16,7 @@ variable "dynamodb" {
   })
 
   default = {
-    "name" : "assets"
+    "name" : "DummyAssets"
     "hash_key" : "hostname"
     "policy" : "DynamoDbAllowScanAndGetItem"
   }
@@ -51,8 +51,8 @@ variable "apigw_apikey" {
   })
 
   default = {
-    "name" : "AssetsApiKey",
-    "description" : "Assets Api Key required to requests the API."
+    "name" : "DummyAssetsApiKey",
+    "description" : "Required Api Key to requests the API."
   }
 }
 
