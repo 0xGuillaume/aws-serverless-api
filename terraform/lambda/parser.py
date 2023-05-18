@@ -3,6 +3,7 @@ import json
 from boto3 import client
 
 
+TABLE = "DummyAssets"
 client = client('dynamodb')
 
 
@@ -10,7 +11,7 @@ def scan(context:dict, event) -> dict:
     """Get all items of DynamoDB asset table."""
 
     data = client.scan(
-        TableName="assets"
+        TableName=TABLE
     )
 
     response = {
@@ -31,7 +32,7 @@ def get_item(context:dict, event) -> dict:
     hostname = context["pathParameters"]["hostname"]
 
     item = client.get_item(
-        TableName="assets",
+        TableName=TABLE,
         Key={
             "hostname": {"S": hostname}
         }
