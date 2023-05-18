@@ -106,15 +106,17 @@ variable "lambda" {
   description = "Global lambda attributes."
 
   type = object({
-    source_file = string
-    output_file = string
-    role        = string
+    source_file      = string
+    output_file      = string
+    role_name        = string
+    role_description = string
   })
 
   default = {
     "source_file" : "./lambda/parser.py",
     "output_file" : "./lambda/lambda_function_payload.zip"
-    "role" : "DummyAssetsLambdaRole"
+    "role_name" : "DummyAssetsLambdaRole",
+    "role_description": "Allows lamba to perform Scan & Get-Item actions on DummyAssetsDDB."
   }
 }
 
