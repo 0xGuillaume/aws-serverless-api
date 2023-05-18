@@ -28,7 +28,7 @@ resource "aws_iam_role" "iam_for_lambda" {
             "dynamodb:GetItem"
           ]
           Effect   = "Allow"
-          Resource = "*"
+          Resource = aws_dynamodb_table.dynamodb.arn
         },
       ]
     })
@@ -46,6 +46,7 @@ data "archive_file" "lambda" {
 resource "aws_lambda_function" "lambda" {
   for_each = { for each in var.lambda_handlers : each.name => each }
 
+  description   = each.value.description
   filename      = var.lambda.output_file
   function_name = each.value.name
   role          = aws_iam_role.iam_for_lambda.arn
