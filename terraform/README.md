@@ -19,30 +19,24 @@ Terraform files are based on deployed services to gain more readability and easi
 ```
 
 
-## Dynamo DB and Lambdas
+## Api Gateway
 
-Both `scan` and `get_item` lambdas are querying _DyamoDB_ `DummyAssets` table. So if you would like to change the table name for your own needs, you have to update the value in **two** different file.
+The _DummyAsset_ API Gateway is set with a quota of **200 requests a day**.
 
-- `variables.tf` : `name` key in `dynamodb` variable block.
+You can increase/decrease this quota or even change the period of time in `variables.tf` file : 
+- `quota_period` : Could be set with 3 values : `DAY`, `WEEK` or `MONTH`.
+- `quota_limit` : Maximum number of requests that could be done.
+
 ```terraform
-variable "dynamodb" {
-  description = "DynamoDb instance attributes."
-
-  type = object({
-    name     = string
-    hash_key = string
-    policy   = string
-  })
-
+variable "apigw_plan" {
   default = {
-    "name" : "YourTableName"
-    "hash_key" : "hostname"
-    "policy" : "DynamoDbAllowScanAndGetItem"
+    "name" : "DummyAssetsApiKey",
+    "description" : "API Key authentication to requests Assets API.",
+    "quota_limit" : 200,
+    "quota_offset" : 0,
+    "quota_period" : "DAY"
   }
 }
 ```
 
-- `lambda/parser.py` : `TABLE` constant.
-```python
-TABLE = "YourTableName"
-```
+
