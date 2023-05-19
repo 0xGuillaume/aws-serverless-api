@@ -71,7 +71,7 @@ variable "apigw_plan" {
   default = {
     "name" : "DummyAssetsApiKey",
     "description" : "API Key authentication to requests Assets API.",
-    "quota_limit" : 100,
+    "quota_limit" : 200,
     "quota_offset" : 0,
     "quota_period" : "DAY"
   }
