@@ -21,9 +21,9 @@ Terraform files are based on deployed services to gain more readability and easi
 
 ## Api Gateway
 
-The _DummyAsset_ API Gateway is set with a quota of **200 requests a day**.
+The _DummyAssets_ API Gateway is set with a quota of **200 requests a day**.
 
-You can increase/decrease this quota or even change the period of time in `variables.tf` file : 
+You can increase/decrease this quota or even change the period of time in `variables.tf` file inside the `apigw_plan` variable : 
 - `quota_period` : Could be set with 3 values : `DAY`, `WEEK` or `MONTH`.
 - `quota_limit` : Maximum number of requests that could be done.
 
