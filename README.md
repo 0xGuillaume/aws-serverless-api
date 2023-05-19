@@ -77,7 +77,7 @@ $ export AWS_REGION="eu-west-1" # Or any other region you want to use.
 
 ---
 
-One you correctly configure the AWS provider run following commands.
+Once you correctly configure the AWS provider run following commands.
 
 ```bash
 $ cd terraform/
@@ -95,7 +95,7 @@ You can run `demo.py` file in order to send automated requests. The script rando
 $ python3 demo.py --amount 50
 ```
 
-Also there is by default a **one second interval** between each request but you can set your own interval.
+Also there is by default a **one second interval** between each request but you can set your own interval (in second).
 
 ```bash
 $ python3 demo.py --amount 50 --interval 0
