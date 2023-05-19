@@ -20,7 +20,7 @@ _DummyAssets_ is a serverless API powered by AWS. It is based on 3 services :
 
 ## Api Gateway
 
-_DummyAssetsAPI_ API Gateway provides a REST API with 2 GET methods :
+_DummyAssets_ API Gateway provides a REST API with 2 GET methods :
 
 - `api-url/stage/assets` : Returns all the DynamoDB items table.
 
