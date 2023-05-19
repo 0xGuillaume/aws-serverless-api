@@ -36,7 +36,7 @@ $ terraform outputs --json # `| jq` for a better render.
 
 _DummyAssetsDDB_ is a DynamoDB (_NoSQL_) table filled with a random set of instances with random attributes values. 
 
-Each table items use the bellow data format.
+Each table items uses the bellow data format.
 
 ```json
 "Item1": {
