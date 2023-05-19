@@ -5,7 +5,7 @@
   <img src="https://img.shields.io/badge/Python-FFD43B?style=for-the-badge&logo=python&logoColor=blue"/>
 </p>
 
-# Aws Api Serverless
+# Aws Serverless Api
 
 > This project has been built for development and test purpose.
 
